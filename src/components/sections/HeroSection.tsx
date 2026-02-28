@@ -120,11 +120,11 @@ export default function HeroSection() {
           <div className="flex lg:flex-col items-center lg:items-stretch bg-[rgba(255,255,255,0.04)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden">
             {stats.map((stat, i) => (
               <div key={i} className="flex items-center lg:flex-col">
-                <div className="text-center px-5 sm:px-8 lg:px-10 py-5 lg:py-7 overflow-hidden">
-                  <span className="block text-2xl sm:text-3xl lg:text-4xl font-bold text-white stat-number truncate">
+                <div className="text-center px-5 sm:px-8 lg:px-10 py-5 lg:py-7">
+                  <span className="block text-2xl sm:text-3xl lg:text-4xl font-bold text-white stat-number">
                     {stat.value}
                   </span>
-                  <span className="text-[11px] sm:text-xs text-[rgba(255,255,255,0.45)] mt-1 block tracking-wide truncate">
+                  <span className="text-[11px] sm:text-xs text-[rgba(255,255,255,0.45)] mt-1 block tracking-wide">
                     {stat.label}
                   </span>
                 </div>

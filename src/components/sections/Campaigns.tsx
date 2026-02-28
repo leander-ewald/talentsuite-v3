@@ -74,8 +74,8 @@ export default function Campaigns() {
                 <div className="w-10 h-10 rounded-xl bg-[rgba(27,152,224,0.08)] border border-[rgba(27,152,224,0.12)] flex items-center justify-center text-[var(--color-accent)] mb-4 group-hover:bg-[rgba(27,152,224,0.15)] transition-colors">
                   <Icon size={18} />
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold mb-2" style={{ overflowWrap: "break-word" }}>{cap.title}</h3>
-                <p className="text-sm text-[rgba(255,255,255,0.5)] leading-relaxed" style={{ overflowWrap: "break-word" }}>{cap.desc}</p>
+                <h3 className="text-base sm:text-lg font-semibold mb-2">{cap.title}</h3>
+                <p className="text-sm text-[rgba(255,255,255,0.5)] leading-relaxed">{cap.desc}</p>
               </div>
             );
           })}
@@ -90,8 +90,8 @@ export default function Campaigns() {
                 <div className="w-10 h-10 rounded-xl bg-[rgba(27,152,224,0.08)] border border-[rgba(27,152,224,0.12)] flex items-center justify-center text-[var(--color-accent)] mb-4 group-hover:bg-[rgba(27,152,224,0.15)] transition-colors">
                   <Icon size={18} />
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold mb-2" style={{ overflowWrap: "break-word" }}>{cap.title}</h3>
-                <p className="text-sm text-[rgba(255,255,255,0.5)] leading-relaxed" style={{ overflowWrap: "break-word" }}>{cap.desc}</p>
+                <h3 className="text-base sm:text-lg font-semibold mb-2">{cap.title}</h3>
+                <p className="text-sm text-[rgba(255,255,255,0.5)] leading-relaxed">{cap.desc}</p>
               </div>
             );
           })}
