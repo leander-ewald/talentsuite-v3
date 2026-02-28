@@ -89,7 +89,7 @@ export default function Faqs() {
                 aria-expanded={openIndex === i}
                 itemProp="name"
               >
-                <span>{faq.question}</span>
+                <span className="min-w-0 flex-1">{faq.question}</span>
                 <span className={`faq-icon ${openIndex === i ? "bg-[rgba(27,152,224,0.2)] rotate-0" : ""}`}>
                   {openIndex === i ? <Minus size={16} /> : <Plus size={16} />}
                 </span>

@@ -60,10 +60,10 @@ export default function Blogs() {
                   <ArrowUpRight size={14} />
                 </div>
               </div>
-              <h3 className="text-lg font-semibold mb-3 leading-snug group-hover:text-[var(--color-accent)] transition-colors">
+              <h3 className="text-lg font-semibold mb-3 leading-snug group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
                 {blog.title}
               </h3>
-              <p className="text-sm text-[rgba(255,255,255,0.45)] leading-relaxed">{blog.desc}</p>
+              <p className="text-sm text-[rgba(255,255,255,0.45)] leading-relaxed line-clamp-4" style={{ overflowWrap: "break-word" }}>{blog.desc}</p>
             </Link>
           ))}
         </div>

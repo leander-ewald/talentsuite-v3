@@ -19,8 +19,8 @@ export default function MainSection({ title, description, buttonText, buttonLink
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
-            <h1 className="text-[clamp(1.75rem,4vw,3.25rem)] font-black leading-[1.1] tracking-tight mb-5">{title}</h1>
-            <p className="text-base sm:text-lg text-[rgba(255,255,255,0.6)] leading-relaxed mb-8">{description}</p>
+            <h1 className="text-[clamp(1.75rem,4vw,3.25rem)] font-black leading-[1.1] tracking-tight mb-5 overflow-hidden overflow-wrap-[break-word]" style={{ overflowWrap: "break-word" }}>{title}</h1>
+            <p className="text-base sm:text-lg text-[rgba(255,255,255,0.6)] leading-relaxed mb-8" style={{ overflowWrap: "break-word" }}>{description}</p>
             <Link href={buttonLink} target="_blank" rel="noopener noreferrer" className="btn-primary">
               {buttonText}
               <ArrowUpRight size={18} />

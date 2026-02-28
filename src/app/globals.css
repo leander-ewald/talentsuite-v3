@@ -129,6 +129,9 @@ a {
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .card:hover {
@@ -145,6 +148,9 @@ a {
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s ease;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .card-glass:hover {
@@ -312,6 +318,9 @@ a {
   cursor: pointer;
   text-align: left;
   color: #fff;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
   font-size: clamp(1rem, 1.2vw, 1.125rem);
   font-weight: 600;
   font-family: var(--font-accent);
@@ -350,6 +359,8 @@ a {
   color: var(--color-text-muted);
   font-size: clamp(0.9rem, 1vw, 1rem);
   line-height: 1.7;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* ---- Prose (legal/article) ---- */
