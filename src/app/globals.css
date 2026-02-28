@@ -276,7 +276,7 @@ a {
   width: auto;
   max-width: 140px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  filter: invert(1) grayscale(1);
 }
 
 @keyframes scrollLeft {
