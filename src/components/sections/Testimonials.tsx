@@ -51,28 +51,28 @@ export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const autoPlayRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const userScrollingRef = useRef(false);
+  const pausedRef = useRef(false);
+  const activeIndexRef = useRef(0);
 
   const scrollToIndex = useCallback((index: number) => {
     const container = scrollRef.current;
     if (!container) return;
     const card = container.children[index] as HTMLElement;
     if (!card) return;
-    userScrollingRef.current = true;
     container.scrollTo({
       left: card.offsetLeft - container.offsetLeft - 16,
       behavior: "smooth",
     });
     setActiveIndex(index);
-    setTimeout(() => { userScrollingRef.current = false; }, 600);
+    activeIndexRef.current = index;
   }, []);
 
+  // Detect active card from scroll position
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
     let scrollTimeout: ReturnType<typeof setTimeout>;
     const handleScroll = () => {
-      if (userScrollingRef.current) return;
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         const children = Array.from(container.children) as HTMLElement[];
@@ -84,41 +84,51 @@ export default function Testimonials() {
           if (dist < minDist) { minDist = dist; closest = i; }
         });
         setActiveIndex(closest);
-      }, 100);
+        activeIndexRef.current = closest;
+      }, 80);
     };
     container.addEventListener("scroll", handleScroll, { passive: true });
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Auto-advance with pause on user interaction
   useEffect(() => {
-    const startAutoPlay = () => {
+    const scheduleNext = () => {
       if (autoPlayRef.current) clearTimeout(autoPlayRef.current);
       autoPlayRef.current = setTimeout(() => {
-        setActiveIndex((prev) => {
-          const next = (prev + 1) % testimonialData.length;
-          scrollToIndex(next);
-          return next;
-        });
+        if (pausedRef.current) return;
+        const next = (activeIndexRef.current + 1) % testimonialData.length;
+        scrollToIndex(next);
+        scheduleNext();
       }, 5000);
     };
-    startAutoPlay();
+
+    scheduleNext();
 
     const container = scrollRef.current;
     if (!container) return;
-    const pauseAutoPlay = () => { if (autoPlayRef.current) clearTimeout(autoPlayRef.current); };
-    const resumeAutoPlay = () => { startAutoPlay(); };
 
-    container.addEventListener("pointerdown", pauseAutoPlay);
-    container.addEventListener("pointerup", resumeAutoPlay);
-    container.addEventListener("touchstart", pauseAutoPlay, { passive: true });
-    container.addEventListener("touchend", resumeAutoPlay);
+    const pause = () => {
+      pausedRef.current = true;
+      if (autoPlayRef.current) clearTimeout(autoPlayRef.current);
+    };
+
+    const resume = () => {
+      pausedRef.current = false;
+      scheduleNext();
+    };
+
+    container.addEventListener("pointerdown", pause);
+    container.addEventListener("pointerup", resume);
+    container.addEventListener("touchstart", pause, { passive: true });
+    container.addEventListener("touchend", resume);
 
     return () => {
       if (autoPlayRef.current) clearTimeout(autoPlayRef.current);
-      container.removeEventListener("pointerdown", pauseAutoPlay);
-      container.removeEventListener("pointerup", resumeAutoPlay);
-      container.removeEventListener("touchstart", pauseAutoPlay);
-      container.removeEventListener("touchend", resumeAutoPlay);
+      container.removeEventListener("pointerdown", pause);
+      container.removeEventListener("pointerup", resume);
+      container.removeEventListener("touchstart", pause);
+      container.removeEventListener("touchend", resume);
     };
   }, [scrollToIndex]);
 
@@ -172,7 +182,7 @@ export default function Testimonials() {
         {/* Scrollable Cards */}
         <div
           ref={scrollRef}
-          className="flex gap-5 overflow-x-auto snap-x snap-proximity scrollbar-hide pb-4 -mx-4 px-4"
+          className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
         >
           {testimonialData.map((t, i) => (
             <article
@@ -228,10 +238,10 @@ export default function Testimonials() {
             <button
               key={i}
               onClick={() => scrollToIndex(i)}
-              className={`h-2 rounded-full transition-all duration-300 ${
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                 i === activeIndex
                   ? "w-8 bg-[var(--color-accent)]"
-                  : "w-2 bg-[rgba(255,255,255,0.15)]"
+                  : "w-2 bg-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.3)]"
               }`}
               aria-label={`Testimonial ${i + 1}`}
             />
