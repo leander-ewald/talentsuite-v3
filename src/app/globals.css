@@ -240,7 +240,6 @@ a {
 /* ---- Logo Marquee ---- */
 .scroll-row {
   display: flex;
-  gap: 24px;
   width: fit-content;
 }
 
@@ -259,7 +258,7 @@ a {
 .scroll-item {
   flex-shrink: 0;
   height: 40px;
-  padding: 0 12px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: center;
