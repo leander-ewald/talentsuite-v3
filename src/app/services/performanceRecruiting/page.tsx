@@ -5,6 +5,15 @@ import ServiceTestimonials from "@/components/services/ServiceTestimonials";
 import Solution from "@/components/services/Solution";
 import Traditional from "@/components/services/Traditional";
 import Appointment from "@/components/services/Appointment";
+import ServiceFaqs from "@/components/services/ServiceFaqs";
+
+const faqData = [
+  { question: "Was ist Performance Recruiting?", answer: "Performance Recruiting ist datenbasiertes Recruiting über Social-Media-Kanäle wie Meta, TikTok und LinkedIn. Statt auf Jobbörsen zu warten, sprechen wir passive Kandidat:innen dort an, wo sie sich täglich aufhalten -- mit gezielten Anzeigen und optimierten Bewerbungsfunnels." },
+  { question: "Wie schnell kommen die ersten Bewerbungen?", answer: "In der Regel erhalten unsere Kunden bereits in den ersten 7--14 Tagen qualifizierte Bewerbungen. Nach 4--6 Wochen laufen die Kampagnen auf voller Performance mit optimierten Kosten pro Bewerbung." },
+  { question: "Was kostet Performance Recruiting bei TalentSuite?", answer: "Die Kosten hängen von der Anzahl offener Stellen, der Region und der Branche ab. In einem kostenlosen Erstgespräch analysieren wir deine Situation und erstellen ein transparentes Angebot -- ohne versteckte Kosten." },
+  { question: "Funktioniert das auch in meiner Branche?", answer: "Ja -- wir haben Erfahrung in über 20 Branchen: Handwerk, Pflege, Gastronomie, Logistik, IT, Immobilien und viele mehr. Die Strategie wird individuell auf deine Zielgruppe zugeschnitten." },
+  { question: "Was unterscheidet euch von einer klassischen Recruiting-Agentur?", answer: "Wir arbeiten nicht mit Headhuntern oder Jobbörsen, sondern mit datenbasierten Performance-Kampagnen. Das bedeutet: messbare Ergebnisse, planbare Kosten und ein skalierbares System statt Einzelvermittlung." },
+];
 
 export const metadata: Metadata = {
   title: "Performance Recruiting Agentur | Social Media Recruiting | TalentSuite",
@@ -42,12 +51,13 @@ const testimonials = [
 export default function PerformanceRecruitingPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "Performance Recruiting", provider: { "@type": "MarketingAgency", name: "TalentSuite", url: "https://talentsuite.io", areaServed: ["DE", "AT", "CH"] }, description: "Datenbasiertes Social Media Recruiting mit Performance-Kampagnen auf Meta, TikTok & LinkedIn.", serviceType: "Performance Recruiting" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "Performance Recruiting", provider: { "@type": "MarketingAgency", name: "TalentSuite", url: "https://talentsuite.io", areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "Austria" }, { "@type": "Country", name: "Switzerland" }] }, description: "Datenbasiertes Social Media Recruiting mit Performance-Kampagnen auf Meta, TikTok & LinkedIn.", serviceType: "Performance Recruiting" }) }} />
       <MainSection title={<>Dein Recruiting braucht<br />kein Glück &ndash;<br /><span className="text-[var(--color-accent)]">es braucht System.</span></>} description="Wir helfen dir, passende Bewerber:innen zu gewinnen -- mit datenbasierten Kampagnen, smarten Funnels und hoher Abschlussquote." buttonText="Jetzt Beratungsgespräch buchen" imageSrc="/assets/services-img.png" imageAlt="Performance Recruiting -- Qualifizierte Bewerbungen über Social Media" />
       <Traditional title="Klassisches Recruiting ist tot." description="Die Zeiten, in denen man mit einem Stelleninserat auf die richtigen Kandidat:innen warten konnte, sind vorbei. Heute konkurrierst du um Talente -- vor allem auf Social Media, nicht auf Jobbörsen." data={traditionalData} />
       <Solution title="Performance Recruiting" description="Wir bringen deine Jobs dorthin, wo sich deine Zielgruppe täglich bewegt -- in Social Feeds und auf mobilen Geräten." items={solutions} />
       <Steps title="Was du bekommst" stepsData={steps} />
       <ServiceTestimonials title="Das sagen unsere Kunden" description="Echte Ergebnisse, echte Stimmen aus verschiedenen Branchen." link="https://calendar.app.google/QFoADWcRwwuYUoky8" linkText="Auch so recruitern? Jetzt Termin sichern" testimonialData={testimonials} />
+      <ServiceFaqs title="Häufige Fragen zu Performance Recruiting" faqData={faqData} />
       <Appointment heading="Wir zeigen dir in einem kostenlosen Gespräch, wie dein Unternehmen von Performance Recruiting profitieren kann." buttonText="Jetzt Termin buchen" />
     </>
   );

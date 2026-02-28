@@ -5,6 +5,15 @@ import ServiceTestimonials from "@/components/services/ServiceTestimonials";
 import Solution from "@/components/services/Solution";
 import Traditional from "@/components/services/Traditional";
 import Appointment from "@/components/services/Appointment";
+import ServiceFaqs from "@/components/services/ServiceFaqs";
+
+const faqData = [
+  { question: "Welche E-Commerce-Plattformen unterstützt TalentSuite?", answer: "Wir sind spezialisiert auf Shopify und Shopify Plus. Für individuelle Anforderungen entwickeln wir auch Custom-Lösungen auf Basis von Next.js und headless Commerce-Architekturen." },
+  { question: "Kann TalentSuite auch einen bestehenden Shop optimieren?", answer: "Ja. Wir analysieren deinen bestehenden Shop und identifizieren Optimierungspotenziale -- von der Conversion-Rate über Ladezeiten bis hin zur Nutzererfahrung. Auch Replatforming zu Shopify begleiten wir." },
+  { question: "Wie steigert ihr den Umsatz meines Online-Shops?", answer: "Durch eine Kombination aus Shop-Optimierung, Performance Marketing (Meta, Google Ads), SEO und Conversion-Optimierung. Wir betrachten den gesamten Funnel -- vom ersten Klick bis zum Kaufabschluss." },
+  { question: "Übernehmt ihr auch die Logistik?", answer: "Wir beraten und implementieren Fulfillment-Lösungen, automatisierte Bestellprozesse und Versandintegrationen. Die physische Logistik bleibt bei deinem Fulfillment-Partner -- wir sorgen für die technische Anbindung." },
+  { question: "Was kostet ein E-Commerce-Projekt?", answer: "Die Investition hängt von Umfang und Komplexität ab. Ein neuer Shopify-Shop startet ab ca. 5.000 EUR, umfangreiche Projekte mit Custom-Entwicklung und Marketing individuell. Transparentes Angebot nach dem Erstgespräch." },
+];
 
 export const metadata: Metadata = {
   title: "E-Commerce Agentur | Shopify Entwicklung & Marketing | TalentSuite",
@@ -42,12 +51,13 @@ const testimonials = [
 export default function ECommercePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "Fullservice E-Commerce", provider: { "@type": "MarketingAgency", name: "TalentSuite", url: "https://talentsuite.io", areaServed: ["DE", "AT", "CH"] }, description: "Fullservice E-Commerce: Shopify-Entwicklung, Logistik, SEO und Performance Marketing.", serviceType: "E-Commerce Entwicklung" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "Fullservice E-Commerce", provider: { "@type": "MarketingAgency", name: "TalentSuite", url: "https://talentsuite.io", areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "Austria" }, { "@type": "Country", name: "Switzerland" }] }, description: "Fullservice E-Commerce: Shopify-Entwicklung, Logistik, SEO und Performance Marketing.", serviceType: "E-Commerce Entwicklung" }) }} />
       <MainSection title={<>Dein E-Commerce braucht<br />mehr als nur <span className="text-[var(--color-accent)]">einen Shop.</span></>} description="Wir begleiten dich von der Strategie über Technik bis hin zu Marketing -- damit dein Onlinehandel nachhaltig wächst." buttonText="Jetzt Beratungsgespräch anfragen" imageSrc="/assets/services-img.png" imageAlt="E-Commerce Agentur -- Shopify Entwicklung und Marketing" />
       <Traditional title="Viele E-Commerce Projekte scheitern an fehlender Strategie." description="Ein Onlineshop allein reicht heute nicht aus. Komplexe technische Anforderungen und ein dynamisches Wettbewerbsumfeld stellen viele Händler vor große Herausforderungen." data={traditionalData} />
       <Solution title="Fullservice E-Commerce aus einer Hand" description="Wir entwickeln individuelle E-Commerce-Strategien und setzen sie technisch und marketingseitig konsequent um." items={solutions} />
       <Steps title="Deine Vorteile" stepsData={steps} />
       <ServiceTestimonials title="Das sagen unsere Kunden" description="Echte Ergebnisse aus dem E-Commerce." link="https://calendar.app.google/QFoADWcRwwuYUoky8" linkText="Auch so wachsen? Jetzt Termin sichern" testimonialData={testimonials} />
+      <ServiceFaqs title="Häufige Fragen zu E-Commerce" faqData={faqData} />
       <Appointment heading="Lass uns gemeinsam deine E-Commerce-Potenziale entfesseln." buttonText="Jetzt Termin anfragen" />
     </>
   );

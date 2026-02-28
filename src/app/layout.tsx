@@ -59,6 +59,10 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
+        <link rel="alternate" hrefLang="de-DE" href="https://talentsuite.io" />
+        <link rel="alternate" hrefLang="de-AT" href="https://talentsuite.io" />
+        <link rel="alternate" hrefLang="de-CH" href="https://talentsuite.io" />
+        <link rel="alternate" hrefLang="x-default" href="https://talentsuite.io" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
@@ -77,7 +81,11 @@ export default function RootLayout({
                 addressRegion: "NRW",
                 addressCountry: "DE",
               },
-              areaServed: ["DE", "AT", "CH"],
+              areaServed: [
+                { "@type": "Country", name: "Germany" },
+                { "@type": "Country", name: "Austria" },
+                { "@type": "Country", name: "Switzerland" },
+              ],
               serviceType: [
                 "Performance Recruiting",
                 "Neukundengewinnung",

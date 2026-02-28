@@ -5,6 +5,15 @@ import ServiceTestimonials from "@/components/services/ServiceTestimonials";
 import Solution from "@/components/services/Solution";
 import Traditional from "@/components/services/Traditional";
 import Appointment from "@/components/services/Appointment";
+import ServiceFaqs from "@/components/services/ServiceFaqs";
+
+const faqData = [
+  { question: "Welche Technologien nutzt TalentSuite für Webentwicklung?", answer: "Wir arbeiten mit React, Next.js und Shopify -- je nach Projektanforderung. Für maximale Performance, SEO und Skalierbarkeit setzen wir auf moderne Frameworks statt auf veraltete CMS-Lösungen." },
+  { question: "Wie lange dauert eine Website-Entwicklung?", answer: "Ein typisches Projekt dauert 4--8 Wochen von der Konzeption bis zum Launch. Komplexere Projekte wie E-Commerce-Plattformen oder Webapps können 8--12 Wochen in Anspruch nehmen." },
+  { question: "Ist SEO in der Webentwicklung enthalten?", answer: "Ja. Technisches SEO ist Standard bei jedem Projekt -- schnelle Ladezeiten, saubere URL-Strukturen, Schema Markup, Meta-Tags und Core Web Vitals Optimierung sind immer inklusive." },
+  { question: "Bietet ihr auch Wartung und Support an?", answer: "Ja. Nach dem Launch bieten wir kontinuierliche Wartung, Updates, Performance-Monitoring und Weiterentwicklung an. So bleibt deine Website immer aktuell und sicher." },
+  { question: "Was kostet eine professionelle Website?", answer: "Die Kosten richten sich nach Umfang und Komplexität. Eine einfache Corporate Website startet ab ca. 3.000 EUR, komplexere Projekte individuell. Wir erstellen dir nach dem Erstgespräch ein transparentes Angebot." },
+];
 
 export const metadata: Metadata = {
   title: "Webentwicklung Agentur | UX Design & SEO | TalentSuite",
@@ -42,12 +51,13 @@ const testimonials = [
 export default function WebDevelopmentPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "Webentwicklung", provider: { "@type": "MarketingAgency", name: "TalentSuite", url: "https://talentsuite.io", areaServed: ["DE", "AT", "CH"] }, description: "Professionelle Webentwicklung: UX/UI Design, React & Next.js, SEO und Wartung.", serviceType: "Webentwicklung" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "Webentwicklung", provider: { "@type": "MarketingAgency", name: "TalentSuite", url: "https://talentsuite.io", areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "Austria" }, { "@type": "Country", name: "Switzerland" }] }, description: "Professionelle Webentwicklung: UX/UI Design, React & Next.js, SEO und Wartung.", serviceType: "Webentwicklung" }) }} />
       <MainSection title={<>Deine Website ist dein<br />bester <span className="text-[var(--color-accent)]">Vertriebler</span> &ndash; 24/7.</>} description="Wir entwickeln performante, SEO-optimierte Websites, die Vertrauen schaffen und Besucher in Kunden verwandeln." buttonText="Jetzt Web-Beratung buchen" imageSrc="/assets/services-img.png" imageAlt="Webentwicklung -- Moderne Websites mit React und Next.js" />
       <Traditional title="Deine Website verliert Kunden -- jeden Tag." description="Eine veraltete, langsame oder schlecht strukturierte Website kostet dich täglich potenzielle Kunden. Ohne moderne Technik und klare Nutzerführung verlierst du Umsatz." data={traditionalData} />
       <Solution title="Webentwicklung, die konvertiert" description="Websites, die nicht nur gut aussehen, sondern messbar performen -- von der Konzeption über die Entwicklung bis zur SEO-Optimierung." items={solutions} />
       <Steps title="Was du von uns bekommst" stepsData={steps} />
       <ServiceTestimonials title="Das sagen unsere Kunden" description="Echte Ergebnisse aus der Web-Zusammenarbeit." link="https://calendar.app.google/QFoADWcRwwuYUoky8" linkText="Auch eine bessere Website? Jetzt Termin sichern" testimonialData={testimonials} />
+      <ServiceFaqs title="Häufige Fragen zur Webentwicklung" faqData={faqData} />
       <Appointment heading="Lass uns gemeinsam eine Website bauen, die Vertrauen schafft und Kunden gewinnt." buttonText="Jetzt Termin anfragen" />
     </>
   );

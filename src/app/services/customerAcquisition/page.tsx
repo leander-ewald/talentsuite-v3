@@ -5,6 +5,15 @@ import ServiceTestimonials from "@/components/services/ServiceTestimonials";
 import Solution from "@/components/services/Solution";
 import Traditional from "@/components/services/Traditional";
 import Appointment from "@/components/services/Appointment";
+import ServiceFaqs from "@/components/services/ServiceFaqs";
+
+const faqData = [
+  { question: "Wie gewinnt TalentSuite neue Kunden für mein Unternehmen?", answer: "Wir setzen auf datenbasierte Performance-Kampagnen über Meta, Google und LinkedIn Ads. Kombiniert mit optimierten Landingpages und Funnel-Strategien generieren wir qualifizierte Leads, die zu echten Kunden werden." },
+  { question: "Ab wann sehe ich erste Ergebnisse?", answer: "Erste qualifizierte Anfragen kommen in der Regel bereits nach 1--2 Wochen. Die volle Performance erreichen die Kampagnen nach 4--6 Wochen, wenn alle Stellschrauben optimiert sind." },
+  { question: "Was kostet die Neukundengewinnung?", answer: "Die Investition richtet sich nach deinem Markt, deiner Zielgruppe und dem gewünschten Volumen. In einem kostenlosen Erstgespräch berechnen wir deine voraussichtlichen Kosten pro Lead -- transparent und ohne versteckte Gebühren." },
+  { question: "Für welche Branchen eignet sich digitale Neukundengewinnung?", answer: "Unsere Systeme funktionieren branchenübergreifend -- von B2B-Dienstleistern über Handwerksbetriebe bis zu E-Commerce. Entscheidend ist nicht die Branche, sondern dass deine Zielgruppe digital erreichbar ist." },
+  { question: "Brauche ich eine eigene Website für die Leadgenerierung?", answer: "Nicht unbedingt. Wir erstellen bei Bedarf eigene Landingpages, die speziell auf Conversion optimiert sind. Eine bestehende Website kann aber als Vertrauenssignal die Ergebnisse zusätzlich verbessern." },
+];
 
 export const metadata: Metadata = {
   title: "Neukundengewinnung Agentur | Digitale Leadgenerierung | TalentSuite",
@@ -42,12 +51,13 @@ const testimonials = [
 export default function CustomerAcquisitionPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "Digitale Neukundengewinnung", provider: { "@type": "MarketingAgency", name: "TalentSuite", url: "https://talentsuite.io", areaServed: ["DE", "AT", "CH"] }, description: "Performancebasierte Neukundengewinnung mit digitalen Kampagnen und Funnels.", serviceType: "Neukundengewinnung" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "Digitale Neukundengewinnung", provider: { "@type": "MarketingAgency", name: "TalentSuite", url: "https://talentsuite.io", areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "Austria" }, { "@type": "Country", name: "Switzerland" }] }, description: "Performancebasierte Neukundengewinnung mit digitalen Kampagnen und Funnels.", serviceType: "Neukundengewinnung" }) }} />
       <MainSection title={<>Kunden gewinnen geht nicht<br />mehr über <span className="text-[var(--color-accent)]">Kaltakquise.</span></>} description="Wir entwickeln digitale Kundengewinnungsstrecken, die genau deine Zielgruppe ansprechen -- messbar, automatisiert und planbar skalierbar." buttonText="Jetzt Strategiegespräch vereinbaren" imageSrc="/assets/services-img.png" imageAlt="Neukundengewinnung -- Digitale Leadgenerierung mit System" />
       <Traditional title="Deine Wunschkunden sind online -- aber nicht auf deinem Radar." description="Viele Unternehmen haben starke Produkte, aber keine funktionierende Pipeline für neue Kundenanfragen. Ohne Sichtbarkeit, ohne klare Botschaft und ohne digitalen Funnel bleibt Wachstum Zufall." data={traditionalData} />
       <Solution title="Performancebasierte Neukundengewinnung" description="Wir entwickeln skalierbare Prozesse zur Kundengewinnung, die auf Daten, Psychologie und digitaler Sichtbarkeit basieren." items={solutions} />
       <Steps title="Was du erreichst" stepsData={steps} />
       <ServiceTestimonials title="Das sagen unsere Kunden" description="Echte Ergebnisse aus verschiedenen Branchen." link="https://calendar.app.google/QFoADWcRwwuYUoky8" linkText="Auch so wachsen? Jetzt Termin sichern" testimonialData={testimonials} />
+      <ServiceFaqs title="Häufige Fragen zur Neukundengewinnung" faqData={faqData} />
       <Appointment heading="Wir zeigen dir in einem unverbindlichen Gespräch, wie du neue Kunden mit System gewinnst." buttonText="Jetzt Erstgespräch buchen" />
     </>
   );
