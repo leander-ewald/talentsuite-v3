@@ -29,7 +29,7 @@ export default function Solution({ title, description, items }: SolutionProps) {
                 {item.number}
               </span>
               <h3 className="text-base font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm text-[rgba(255,255,255,0.5)] leading-relaxed">{item.desc}</p>
+              <p className="text-sm text-[rgba(255,255,255,0.5)] leading-relaxed break-words">{item.desc}</p>
             </div>
           ))}
         </div>

@@ -78,7 +78,7 @@ const BlogArticle = ({
 
       <section style={{ paddingBottom: "3rem" }}>
         <div className="container max-w-3xl">
-          <article style={{ fontSize: "1.05rem", lineHeight: "1.8", color: "rgba(255,255,255,0.8)" }}>
+          <article style={{ fontSize: "1.05rem", lineHeight: "1.8", color: "rgba(255,255,255,0.8)", overflowWrap: "break-word", wordBreak: "break-word" }}>
             {children}
           </article>
 
@@ -103,7 +103,7 @@ const BlogArticle = ({
                 {relatedArticles.map((article, i) => (
                   <Link key={i} href={article.href} className="card-glass" style={{ display: "block", padding: "1rem", textDecoration: "none", color: "inherit" }}>
                     <span style={{ fontSize: "0.8rem", opacity: 0.5 }}>{article.category}</span>
-                    <p style={{ fontWeight: "600", margin: "4px 0 0", fontSize: "0.95rem" }}>{article.title}</p>
+                    <p style={{ fontWeight: "600", margin: "4px 0 0", fontSize: "0.95rem", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{article.title}</p>
                   </Link>
                 ))}
               </div>

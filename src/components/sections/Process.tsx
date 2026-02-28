@@ -60,7 +60,7 @@ export default function Process() {
                 </div>
 
                 <h3 className="text-sm sm:text-base lg:text-lg font-semibold mb-2 sm:mb-3">{step.heading}</h3>
-                <p className="text-xs sm:text-sm text-[rgba(255,255,255,0.45)] leading-relaxed">{step.desc}</p>
+                <p className="text-xs sm:text-sm text-[rgba(255,255,255,0.45)] leading-relaxed break-words">{step.desc}</p>
               </div>
             ))}
           </div>

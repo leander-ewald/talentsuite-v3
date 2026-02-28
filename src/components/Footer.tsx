@@ -107,7 +107,7 @@ export default function Footer() {
               Kostenlose Potenzialanalyse buchen
               <ArrowUpRight size={18} />
             </Link>
-            <div className="flex items-center justify-center gap-6 sm:gap-8 mt-8 text-sm text-[rgba(255,255,255,0.4)]">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 mt-8 text-sm text-[rgba(255,255,255,0.4)] flex-wrap">
               <span>100% kostenlos</span>
               <span className="w-1 h-1 rounded-full bg-[rgba(255,255,255,0.2)]" />
               <span>Unverbindlich</span>

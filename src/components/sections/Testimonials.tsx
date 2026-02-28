@@ -199,7 +199,7 @@ export default function Testimonials() {
                 />
                 <div>
                   <h3 className="font-semibold text-[15px]">{t.name}</h3>
-                  <p className="text-xs text-[rgba(255,255,255,0.45)]">{t.role}</p>
+                  <p className="text-xs text-[rgba(255,255,255,0.45)] truncate max-w-[220px]">{t.role}</p>
                 </div>
               </div>
 

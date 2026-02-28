@@ -78,7 +78,7 @@ export default function Services() {
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-[var(--color-accent)] transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-sm text-[rgba(255,255,255,0.5)] leading-relaxed flex-1">
+                <p className="text-sm text-[rgba(255,255,255,0.5)] leading-relaxed flex-1 break-words">
                   {service.desc}
                 </p>
               </Link>

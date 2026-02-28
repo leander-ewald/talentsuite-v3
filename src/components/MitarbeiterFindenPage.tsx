@@ -158,7 +158,7 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
       >
         <style>{`@media(min-width:768px){.bp-hero{padding:80px 24px 88px !important}}`}</style>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative" }}>
-          <span style={{ fontSize: 56, display: "block", marginBottom: 12 }}>{data.heroEmoji}</span>
+          <span style={{ fontSize: "clamp(40px, 10vw, 56px)", display: "block", marginBottom: 12 }}>{data.heroEmoji}</span>
           <h1 style={{ color: "#ffffff", fontWeight: 800, margin: "0 0 16px", lineHeight: 1.2 }}>
             {data.heroTitle}
           </h1>

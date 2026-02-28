@@ -46,13 +46,13 @@ export default function ServiceTestimonials({ title, description, link, linkText
                 <img src={t.img} alt={`${t.name}, ${t.role}`} loading="lazy" className="w-11 h-11 rounded-full object-cover border-2 border-[rgba(255,255,255,0.08)]" />
                 <div>
                   <h3 className="font-semibold text-[14px]">{t.name}</h3>
-                  <p className="text-xs text-[rgba(255,255,255,0.45)]">{t.role}</p>
+                  <p className="text-xs text-[rgba(255,255,255,0.45)] truncate max-w-[200px]">{t.role}</p>
                 </div>
               </div>
               <div className="flex gap-1 mb-3" aria-label="5 von 5 Sternen">
                 {[...Array(5)].map((_, j) => <Star key={j} size={13} className="text-[var(--color-accent)] fill-[var(--color-accent)]" />)}
               </div>
-              <p className="text-sm text-[rgba(255,255,255,0.6)] leading-relaxed">&ldquo;{t.review}&rdquo;</p>
+              <p className="text-sm text-[rgba(255,255,255,0.6)] leading-relaxed break-words">&ldquo;{t.review}&rdquo;</p>
               <div className="flex items-center justify-between mt-4 pt-3 border-t border-[rgba(255,255,255,0.06)] text-xs text-[rgba(255,255,255,0.4)]">
                 <div className="flex items-center gap-1.5">
                   <MapPin size={11} />{t.from}
