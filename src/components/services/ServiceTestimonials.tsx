@@ -45,8 +45,8 @@ export default function ServiceTestimonials({ title, description, link, linkText
               <div className="flex items-center gap-3 mb-4">
                 <img src={t.img} alt={`${t.name}, ${t.role}`} loading="lazy" className="w-11 h-11 rounded-full object-cover border-2 border-[rgba(255,255,255,0.08)]" />
                 <div className="min-w-0 flex-1">
-                  <h3 className="font-semibold text-[14px] truncate">{t.name}</h3>
-                  <p className="text-xs text-[rgba(255,255,255,0.45)] truncate">{t.role}</p>
+                  <h3 className="font-semibold text-[14px]">{t.name}</h3>
+                  <p className="text-xs text-[rgba(255,255,255,0.45)]">{t.role}</p>
                 </div>
               </div>
               <div className="flex gap-1 mb-3" aria-label="5 von 5 Sternen">

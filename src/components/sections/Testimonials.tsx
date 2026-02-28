@@ -225,8 +225,8 @@ export default function Testimonials() {
                   className="w-12 h-12 rounded-full object-cover border-2 border-[rgba(255,255,255,0.08)]"
                 />
                 <div className="min-w-0 flex-1">
-                  <h3 className="font-semibold text-[15px] truncate">{t.name}</h3>
-                  <p className="text-xs text-[rgba(255,255,255,0.45)] truncate">{t.role}</p>
+                  <h3 className="font-semibold text-[15px]">{t.name}</h3>
+                  <p className="text-xs text-[rgba(255,255,255,0.45)]">{t.role}</p>
                 </div>
               </div>
 
