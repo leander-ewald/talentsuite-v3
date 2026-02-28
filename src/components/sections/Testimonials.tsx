@@ -217,24 +217,23 @@ export default function Testimonials() {
               className="card-glass flex-shrink-0 w-[85vw] sm:w-[340px] md:w-[380px] snap-start p-5 sm:p-6 flex flex-col"
               aria-label={`Bewertung von ${t.name}`}
             >
-              <div className="flex items-center gap-4 mb-5">
+              {/* Header: Image + Name + Stars on same row */}
+              <div className="flex items-center gap-3 mb-5">
                 <img
                   src={t.img}
                   alt={`${t.name}, ${t.role}`}
                   loading="lazy"
-                  className="w-12 h-12 rounded-full object-cover border-2 border-[rgba(255,255,255,0.08)]"
+                  className="w-11 h-11 rounded-full object-cover border-2 border-[rgba(255,255,255,0.08)] flex-shrink-0"
                 />
                 <div className="min-w-0 flex-1">
-                  <h3 className="font-semibold text-[15px]">{t.name}</h3>
-                  <p className="text-xs text-[rgba(255,255,255,0.45)]">{t.role}</p>
+                  <h3 className="font-semibold text-sm leading-tight">{t.name}</h3>
+                  <p className="text-[11px] text-[rgba(255,255,255,0.4)] leading-tight mt-0.5">{t.role}</p>
                 </div>
-              </div>
-
-              {/* Stars */}
-              <div className="flex gap-1 mb-4" aria-label="5 von 5 Sternen">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} size={14} className="text-[var(--color-accent)] fill-[var(--color-accent)]" />
-                ))}
+                <div className="flex gap-0.5 flex-shrink-0" aria-label="5 von 5 Sternen">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} size={12} className="text-[var(--color-accent)] fill-[var(--color-accent)]" />
+                  ))}
+                </div>
               </div>
 
               {/* Quote */}

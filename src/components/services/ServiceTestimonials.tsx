@@ -41,18 +41,18 @@ export default function ServiceTestimonials({ title, description, link, linkText
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {testimonialData.map((t, i) => (
-            <article key={i} className="card-glass p-5 sm:p-6" aria-label={`Bewertung von ${t.name}`}>
+            <article key={i} className="card-glass p-5 sm:p-6 flex flex-col" aria-label={`Bewertung von ${t.name}`}>
               <div className="flex items-center gap-3 mb-4">
-                <img src={t.img} alt={`${t.name}, ${t.role}`} loading="lazy" className="w-11 h-11 rounded-full object-cover border-2 border-[rgba(255,255,255,0.08)]" />
+                <img src={t.img} alt={`${t.name}, ${t.role}`} loading="lazy" className="w-11 h-11 rounded-full object-cover border-2 border-[rgba(255,255,255,0.08)] flex-shrink-0" />
                 <div className="min-w-0 flex-1">
-                  <h3 className="font-semibold text-[14px]">{t.name}</h3>
-                  <p className="text-xs text-[rgba(255,255,255,0.45)]">{t.role}</p>
+                  <h3 className="font-semibold text-sm leading-tight">{t.name}</h3>
+                  <p className="text-[11px] text-[rgba(255,255,255,0.4)] leading-tight mt-0.5">{t.role}</p>
+                </div>
+                <div className="flex gap-0.5 flex-shrink-0" aria-label="5 von 5 Sternen">
+                  {[...Array(5)].map((_, j) => <Star key={j} size={12} className="text-[var(--color-accent)] fill-[var(--color-accent)]" />)}
                 </div>
               </div>
-              <div className="flex gap-1 mb-3" aria-label="5 von 5 Sternen">
-                {[...Array(5)].map((_, j) => <Star key={j} size={13} className="text-[var(--color-accent)] fill-[var(--color-accent)]" />)}
-              </div>
-              <p className="text-sm text-[rgba(255,255,255,0.6)] leading-relaxed break-words">&ldquo;{t.review}&rdquo;</p>
+              <p className="text-sm text-[rgba(255,255,255,0.6)] leading-relaxed flex-1">&ldquo;{t.review}&rdquo;</p>
               <div className="flex items-center justify-between mt-4 pt-3 border-t border-[rgba(255,255,255,0.06)] text-xs text-[rgba(255,255,255,0.4)]">
                 <div className="flex items-center gap-1.5">
                   <MapPin size={11} />{t.from}
