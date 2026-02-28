@@ -55,11 +55,12 @@ export default function Header() {
       }`}
     >
       <div
-        className={`mx-3 sm:mx-5 mt-3 sm:mt-4 rounded-2xl transition-all duration-300 ${
+        className={`sm:mx-5 sm:mt-4 sm:rounded-2xl transition-all duration-300 ${
           scrolled
-            ? "bg-[rgba(9,22,34,0.92)] backdrop-blur-xl border border-[rgba(255,255,255,0.06)] shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+            ? "bg-[rgba(9,22,34,0.92)] backdrop-blur-xl sm:border sm:border-[rgba(255,255,255,0.06)] sm:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
             : "bg-transparent"
         }`}
+        style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
         <nav className="container flex items-center justify-between h-16 lg:h-[72px]">
           <Link href="/" aria-label="TalentSuite Startseite" className="flex-shrink-0">

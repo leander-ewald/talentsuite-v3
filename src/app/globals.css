@@ -443,4 +443,17 @@ a {
   .section {
     padding: clamp(40px, 6vw, 60px) 0;
   }
+
+  .card, .card-glass {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .faq-button {
+    padding: 16px 20px;
+  }
+
+  .faq-answer-inner {
+    padding: 0 20px 16px;
+  }
 }
