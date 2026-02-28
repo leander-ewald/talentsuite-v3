@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AGB | TalentSuite",
   description: "Allgemeine Geschäftsbedingungen der Engel & Mühlhof GbR (Marke: TalentSuite)",
+  alternates: { canonical: "https://talentsuite.io/agb" },
 };
 
 export default function AGB() {

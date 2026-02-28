@@ -17,7 +17,7 @@ const faqData = [
 
 export const metadata: Metadata = {
   title: "E-Commerce Agentur | Shopify Entwicklung & Marketing | TalentSuite",
-  description: "Fullservice E-Commerce Agentur: Shopify-Entwicklung, Logistik, SEO & Performance Marketing. Mehr Umsatz für deinen Online-Shop.",
+  description: "Fullservice E-Commerce Agentur: Shopify-Entwicklung, Logistik, SEO & Performance Marketing. Mehr Umsatz für deinen Online-Shop. Jetzt kostenloses Erstgespräch.",
   alternates: { canonical: "https://talentsuite.io/services/ecommerce" },
 };
 
@@ -30,16 +30,16 @@ const traditionalData = [
 
 const solutions = [
   { number: "01", title: "E-Commerce Strategie & Consulting", desc: "Marktanalyse, Zielgruppendefinition und Wettbewerbspositionierung." },
-  { number: "02", title: "Shop-Entwicklung & Technik", desc: "Performante, skalierbare Plattformen auf Basis von Shopify." },
-  { number: "03", title: "Logistik & Automatisierung", desc: "Moderne Fulfillment- und Logistikprozesse für maximale Effizienz." },
+  { number: "02", title: "Shop-Entwicklung & Technik", desc: "Performante, skalierbare und sichere Plattformen auf Basis von Shopify." },
+  { number: "03", title: "Logistik & Automatisierung", desc: "Verbindung moderner Fulfillment- und Logistikprozesse für maximale Effizienz." },
   { number: "04", title: "Content & Marketing", desc: "Produkttexte, SEO, Paid Ads und Social Media -- alles aus einer Hand." },
 ];
 
 const steps = [
-  { image: "/assets/step1.svg", desc: "Maßgeschneiderte Shop-Lösung" },
+  { image: "/assets/step1.svg", desc: "Maßgeschneiderte Shop-Lösung für dein Business" },
   { image: "/assets/step2.svg", desc: "Optimierte Nutzererfahrung für höhere Umsätze" },
-  { image: "/assets/step3.svg", desc: "Mehr Sichtbarkeit durch gezieltes Marketing" },
-  { image: "/assets/step4.svg", desc: "Skalierbarkeit für nachhaltiges Wachstum" },
+  { image: "/assets/step3.svg", desc: "Mehr Sichtbarkeit und Traffic durch gezieltes Marketing" },
+  { image: "/assets/step4.svg", desc: "Skalierbarkeit und Stabilität für nachhaltiges Wachstum" },
 ];
 
 const testimonials = [

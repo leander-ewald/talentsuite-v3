@@ -17,12 +17,12 @@ const faqData = [
 
 export const metadata: Metadata = {
   title: "Webentwicklung Agentur | UX Design & SEO | TalentSuite",
-  description: "Professionelle Webentwicklung: UX/UI Design, React & Next.js, SEO-Optimierung und Wartung. Websites, die überzeugen und konvertieren.",
+  description: "Professionelle Webentwicklung: UX/UI Design, React & Next.js, SEO-Optimierung und Wartung. Websites, die überzeugen und konvertieren. Jetzt Beratung buchen.",
   alternates: { canonical: "https://talentsuite.io/services/webDevelopment" },
 };
 
 const traditionalData = [
-  { img: "/assets/review-img.png", name: "Veraltetes Design, das nicht überzeugt" },
+  { img: "/assets/review-img.png", name: "Veraltetes Design, das nicht mehr überzeugt" },
   { img: "/assets/review-img.png", name: "Keine mobile Optimierung" },
   { img: "/assets/review-img.png", name: "Langsame Ladezeiten und schlechte Performance" },
   { img: "/assets/review-img.png", name: "Keine Conversion-Optimierung" },
@@ -30,16 +30,16 @@ const traditionalData = [
 
 const solutions = [
   { number: "01", title: "UX/UI Design & Konzeption", desc: "Nutzerzentriertes Design, das überzeugt und konvertiert -- auf jedem Gerät." },
-  { number: "02", title: "Webentwicklung & Programmierung", desc: "Moderne Technologien (React, Next.js, Shopify) für maximale Performance." },
+  { number: "02", title: "Webentwicklung & Programmierung", desc: "Moderne Technologien (React, Next.js, Shopify) für maximale Performance und Skalierbarkeit." },
   { number: "03", title: "SEO & Performance", desc: "Technisches SEO, Core Web Vitals und schnelle Ladezeiten für bessere Rankings." },
-  { number: "04", title: "Wartung & Weiterentwicklung", desc: "Kontinuierliche Optimierung, Updates und Support für deine Website." },
+  { number: "04", title: "Wartung & Weiterentwicklung", desc: "Kontinuierliche Optimierung, Updates und Support -- damit deine Website immer aktuell bleibt." },
 ];
 
 const steps = [
   { image: "/assets/step1.svg", desc: "Professionelle Website, die Vertrauen schafft" },
   { image: "/assets/step2.svg", desc: "Bessere Rankings durch technisches SEO" },
-  { image: "/assets/step3.svg", desc: "Höhere Conversion durch optimierte UX" },
-  { image: "/assets/step4.svg", desc: "Zukunftssichere Technologie" },
+  { image: "/assets/step3.svg", desc: "Höhere Conversion durch optimierte User Experience" },
+  { image: "/assets/step4.svg", desc: "Zukunftssichere Technologie, die mitwächst" },
 ];
 
 const testimonials = [

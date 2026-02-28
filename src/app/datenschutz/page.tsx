@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Datenschutzerklärung | TalentSuite",
   description: "Datenschutzerklärung der Engel & Mühlhof GbR (Marke: TalentSuite)",
+  alternates: { canonical: "https://talentsuite.io/datenschutz" },
 };
 
 export default function Datenschutz() {

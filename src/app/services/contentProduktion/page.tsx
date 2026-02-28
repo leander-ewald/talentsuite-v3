@@ -17,7 +17,7 @@ const faqData = [
 
 export const metadata: Metadata = {
   title: "Content Produktion Agentur | Video, Foto & Social Media | TalentSuite",
-  description: "Professionelle Content Produktion: Videos, Fotos, Social Media Content & Employer Branding. Authentisch, strategisch, wirkungsvoll.",
+  description: "Professionelle Content Produktion: Videos, Fotos, Social Media Content & Employer Branding. Authentisch, strategisch, wirkungsvoll. Jetzt Beratung buchen.",
   alternates: { canonical: "https://talentsuite.io/services/contentProduktion" },
 };
 
@@ -53,8 +53,8 @@ export default function ContentProduktionPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: "Content Produktion", provider: { "@type": "MarketingAgency", name: "TalentSuite", url: "https://talentsuite.io", areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "Austria" }, { "@type": "Country", name: "Switzerland" }] }, description: "Professionelle Content Produktion: Video, Fotografie, Social Media Content und Employer Branding.", serviceType: "Content Produktion" }) }} />
       <MainSection title={<>Content, der <span className="text-[var(--color-accent)]">wirkt</span> &ndash;<br />nicht nur gefällt.</>} description="Wir produzieren Videos, Fotos und Social Media Content, der deine Marke authentisch zeigt und messbare Ergebnisse liefert." buttonText="Jetzt Content-Beratung buchen" imageSrc="/assets/services-img.png" imageAlt="Content Produktion -- Video, Foto und Social Media Content" />
-      <Traditional title="Ohne starken Content bleibt deine Marke unsichtbar." description="In einer Welt voller Reize und kurzer Aufmerksamkeitsspannen entscheidet die Qualität deines Contents über Sichtbarkeit, Vertrauen und Conversions." data={traditionalData} />
-      <Solution title="Content Produktion mit Strategie" description="Wir entwickeln und produzieren Content, der auf deine Zielgruppe und Business-Ziele zugeschnitten ist." items={solutions} />
+      <Traditional title="Ohne starken Content bleibt deine Marke unsichtbar." description="In einer Welt voller Reize und kurzer Aufmerksamkeitsspannen entscheidet die Qualität deines Contents über Sichtbarkeit, Vertrauen und Conversions. Generischer Stock-Content reicht nicht mehr." data={traditionalData} />
+      <Solution title="Content Produktion mit Strategie" description="Wir entwickeln und produzieren Content, der auf deine Zielgruppe und deine Business-Ziele zugeschnitten ist -- von der Konzeption bis zur fertigen Auslieferung." items={solutions} />
       <Steps title="Was du von uns bekommst" stepsData={steps} />
       <ServiceTestimonials title="Das sagen unsere Kunden" description="Echte Ergebnisse aus der Content-Zusammenarbeit." link="https://calendar.app.google/QFoADWcRwwuYUoky8" linkText="Auch besseren Content? Jetzt Termin sichern" testimonialData={testimonials} />
       <ServiceFaqs title="Häufige Fragen zur Content Produktion" faqData={faqData} />
