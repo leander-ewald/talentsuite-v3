@@ -24,7 +24,7 @@ export default function Traditional({ title, description, data }: TraditionalPro
                 <div className="w-8 h-8 rounded-lg bg-[rgba(239,68,68,0.1)] flex items-center justify-center flex-shrink-0 mt-0.5">
                   <AlertTriangle size={14} className="text-[var(--color-danger)]" />
                 </div>
-                <h3 className="text-sm font-medium text-[rgba(255,255,255,0.75)] leading-snug">{item.name}</h3>
+                <h3 className="text-sm font-medium text-[rgba(255,255,255,0.75)] leading-snug min-w-0">{item.name}</h3>
               </div>
             ))}
           </div>

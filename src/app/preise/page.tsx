@@ -24,20 +24,20 @@ export default function PreisePage() {
           <p className="text-[15px] md:text-[18px]" style={{ color: "rgba(255,255,255,0.7)", maxWidth: 520, margin: "0 auto" }}>Keine versteckten Kosten. Keine Mindestlaufzeit. Messbare Ergebnisse.</p>
         </div>
         <div className="px-4 md:px-6 py-10 md:py-16" style={{ maxWidth: 960, margin: "0 auto" }}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5" style={{ marginTop: -40 }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 -mt-6 sm:-mt-10">
             {plans.map((p, i) => (
               <div key={i} className="p-5 sm:p-7" style={{ background: "#ffffff", borderRadius: 16, boxShadow: p.popular ? "0 8px 40px rgba(27,152,224,0.2)" : "0 4px 20px rgba(0,0,0,0.06)", border: p.popular ? "2px solid #1B98E0" : "1px solid #e8e8e8", position: "relative" }}>
-                {p.popular && <div style={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", padding: "4px 16px", borderRadius: 12, background: "#1B98E0", color: "#ffffff", fontSize: 11, fontWeight: 700 }}>BELIEBT</div>}
-                <h3 style={{ color: "#023B5B", fontSize: 20, fontWeight: 700, margin: "0 0 4px" }}>{p.name}</h3>
+                {p.popular && <div className="text-[12px] sm:text-[11px]" style={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", padding: "4px 16px", borderRadius: 12, background: "#1B98E0", color: "#ffffff", fontWeight: 700 }}>BELIEBT</div>}
+                <h3 style={{ color: "#023B5B", fontWeight: 700, margin: "0 0 4px" }} className="text-[18px] sm:text-[20px]">{p.name}</h3>
                 <div style={{ marginBottom: 8 }}>
-                  <span style={{ fontSize: 28, fontWeight: 800, color: "#1B98E0" }}>{p.price}</span>
-                  <span style={{ fontSize: 13, color: "#94A3B8", marginLeft: 4 }}>{p.period}</span>
+                  <span className="text-[22px] sm:text-[28px]" style={{ fontWeight: 800, color: "#1B98E0" }}>{p.price}</span>
+                  <span className="text-[12px] sm:text-[13px]" style={{ color: "#94A3B8", marginLeft: 4 }}>{p.period}</span>
                 </div>
-                <p style={{ color: "#64748B", fontSize: 13, margin: "0 0 16px", lineHeight: 1.5 }}>{p.desc}</p>
+                <p style={{ color: "#64748B", margin: "0 0 16px", lineHeight: 1.5 }} className="text-[14px] sm:text-[13px]">{p.desc}</p>
                 {p.features.map((f, j) => (
                   <div key={j} style={{ display: "flex", gap: 8, marginBottom: 8, alignItems: "flex-start" }}>
                     <span style={{ color: "#10B981", flexShrink: 0, marginTop: 1 }}>✓</span>
-                    <span style={{ color: "#4A5568", fontSize: 13, lineHeight: 1.4 }}>{f}</span>
+                    <span className="text-[14px] sm:text-[13px]" style={{ color: "#4A5568", lineHeight: 1.4 }}>{f}</span>
                   </div>
                 ))}
                 <Link href="/recruiting-analyse" style={{ display: "block", textAlign: "center", marginTop: 20, padding: "14px 20px", borderRadius: 10, textDecoration: "none", fontWeight: 700, fontSize: 15, background: p.popular ? "#1B98E0" : "#023B5B", color: "#ffffff", minHeight: 48 }}>
@@ -50,7 +50,7 @@ export default function PreisePage() {
             {["Keine Mindestlaufzeit", "Transparente Kosten", "DSGVO-konform", "Erste Bewerbungen in 48h"].map((t, i) => (
               <div key={i} style={{ display: "flex", gap: 6, alignItems: "center" }}>
                 <span style={{ color: "#10B981" }}>✓</span>
-                <span style={{ color: "#64748B", fontSize: 13 }}>{t}</span>
+                <span className="text-[14px] sm:text-[13px]" style={{ color: "#64748B" }}>{t}</span>
               </div>
             ))}
           </div>
