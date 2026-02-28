@@ -147,12 +147,12 @@ export default function MitarbeiterBindung() {
                     <div key={f.key} style={{ marginBottom: 12 }}>
                       <label style={{ color: `${W}70`, fontSize: 13, display: "block", marginBottom: 4 }}>{f.label}</label>
                       <input type={f.type || "text"} value={form[f.key]} onChange={e => setForm({ ...form, [f.key]: e.target.value })} placeholder={f.ph}
-                        style={{ width: "100%", padding: "12px 14px", background: `${W}08`, border: `1px solid ${W}15`, borderRadius: 8, color: W, fontSize: 15, fontFamily: "inherit", boxSizing: "border-box" }} />
+                        style={{ width: "100%", padding: "12px 14px", background: `${W}08`, border: `1px solid ${W}15`, borderRadius: 8, color: W, fontSize: 16, fontFamily: "inherit", boxSizing: "border-box" }} />
                       {f.key === "email" && form.email && !emailValid && <span style={{ color: R, fontSize: 12 }}>Bitte gültige E-Mail eingeben</span>}
                     </div>
                   ))}
                   <label style={{ display: "flex", alignItems: "flex-start", gap: 8, margin: "8px 0 16px", cursor: "pointer" }}>
-                    <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ marginTop: 3, accentColor: A }} />
+                    <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ width: 22, height: 22, minWidth: 22, marginTop: 2, accentColor: A, flexShrink: 0, cursor: "pointer" }} />
                     <span style={{ color: `${W}50`, fontSize: 12, lineHeight: 1.5 }}>
                       Ich stimme der <Link href="/datenschutz" target="_blank" style={{ color: A }}>Datenschutzerklärung</Link> zu und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden.
                     </span>

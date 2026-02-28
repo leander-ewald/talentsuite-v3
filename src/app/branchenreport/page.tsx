@@ -53,7 +53,7 @@ export default function BranchenreportPage() {
         <div style={{ background: W, borderRadius: 16, boxShadow: "0 8px 40px rgba(0,0,0,0.08)", overflow: "hidden", marginBottom: 20 }}>
           <div style={{ display: "flex", overflowX: "auto" }}>
             {branches.map((br, i) => (
-              <button key={i} onClick={() => setSelected(i)} className="text-[11px] md:text-[12px]" style={{
+              <button key={i} onClick={() => setSelected(i)} className="text-[12px]" style={{
                 flex: "1 0 auto", padding: "12px 16px", border: "none", borderBottom: `3px solid ${selected === i ? A : "transparent"}`,
                 background: selected === i ? `${A}08` : "transparent", fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap", color: selected === i ? A : "#64748B",
               }}>{br.name}</button>
@@ -92,17 +92,17 @@ export default function BranchenreportPage() {
             <h3 className="text-[17px] md:text-[19px]" style={{ fontWeight: 700, margin: "0 0 4px", textAlign: "center", color: W }}>Vollständigen Report herunterladen</h3>
             <p style={{ fontSize: 13, margin: "0 0 18px", textAlign: "center", color: "rgba(255,255,255,0.6)" }}>20+ Seiten Daten, Benchmarks und Handlungsempfehlungen — kostenlos.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10, maxWidth: 420, margin: "0 auto" }}>
-              <input type="text" placeholder="Ihr Name" value={name} onChange={e => setName(e.target.value)} style={{ padding: "12px 14px", borderRadius: 10, border: "2px solid #334155", background: "#0A1628", fontSize: 14, outline: "none", color: W, boxSizing: "border-box" }} />
+              <input type="text" placeholder="Ihr Name" value={name} onChange={e => setName(e.target.value)} style={{ padding: "12px 14px", borderRadius: 10, border: "2px solid #334155", background: "#0A1628", fontSize: 16, outline: "none", color: W, boxSizing: "border-box" }} />
               <div>
-                <input type="email" placeholder="E-Mail-Adresse" value={email} onChange={e => setEmail(e.target.value)} style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `2px solid ${email && !emailValid ? "#F87171" : "#334155"}`, background: "#0A1628", fontSize: 14, outline: "none", color: W, boxSizing: "border-box" }} />
+                <input type="email" placeholder="E-Mail-Adresse" value={email} onChange={e => setEmail(e.target.value)} style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `2px solid ${email && !emailValid ? "#F87171" : "#334155"}`, background: "#0A1628", fontSize: 16, outline: "none", color: W, boxSizing: "border-box" }} />
                 {email && !emailValid && <p style={{ color: "#F87171", fontSize: 11, marginTop: 4 }}>Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>}
               </div>
               <div>
-                <input type="tel" placeholder="Telefonnummer" value={phone} onChange={e => setPhone(e.target.value)} style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `2px solid ${phone && !phoneValid ? "#F87171" : "#334155"}`, background: "#0A1628", fontSize: 14, outline: "none", color: W, boxSizing: "border-box" }} />
+                <input type="tel" placeholder="Telefonnummer" value={phone} onChange={e => setPhone(e.target.value)} style={{ width: "100%", padding: "12px 14px", borderRadius: 10, border: `2px solid ${phone && !phoneValid ? "#F87171" : "#334155"}`, background: "#0A1628", fontSize: 16, outline: "none", color: W, boxSizing: "border-box" }} />
                 {phone && !phoneValid && <p style={{ color: "#F87171", fontSize: 11, marginTop: 4 }}>Bitte geben Sie eine gültige Telefonnummer ein.</p>}
               </div>
               <label style={{ display: "flex", alignItems: "flex-start", gap: 10, cursor: "pointer", marginTop: 4 }}>
-                <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ width: 18, height: 18, marginTop: 2, accentColor: A, flexShrink: 0 }} />
+                <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ width: 22, height: 22, minWidth: 22, marginTop: 2, accentColor: A, flexShrink: 0, cursor: "pointer" }} />
                 <span style={{ color: `${W}70`, fontSize: 11, lineHeight: 1.5 }}>
                   Ich stimme der <Link href="/datenschutz" target="_blank" style={{ color: A, textDecoration: "underline" }}>Datenschutzerklärung</Link> zu und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden.
                 </span>

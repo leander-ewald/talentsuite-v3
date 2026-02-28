@@ -237,13 +237,13 @@ export default function BranchenRecruitingReport() {
                     <div key={f.key} style={{ marginBottom: 14 }}>
                       <label style={{ display: "block", color: "#64748B", fontSize: 13, marginBottom: 4, fontWeight: 500 }}>{f.label}</label>
                       <input type={f.type || "text"} value={form[f.key]} onChange={e => setForm({ ...form, [f.key]: e.target.value })} placeholder={f.ph}
-                        style={{ width: "100%", padding: "11px 14px", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 15, fontFamily: "inherit", outline: "none", boxSizing: "border-box" }} />
+                        style={{ width: "100%", padding: "11px 14px", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 16, fontFamily: "inherit", outline: "none", boxSizing: "border-box" }} />
                       {f.key === "email" && form.email && !emailValid && <span style={{ color: R, fontSize: 12 }}>Bitte gültige E-Mail eingeben</span>}
                       {f.key === "phone" && form.phone && !phoneValid && <span style={{ color: R, fontSize: 12 }}>Bitte gültige Telefonnummer eingeben</span>}
                     </div>
                   ))}
                   <label style={{ display: "flex", alignItems: "flex-start", gap: 10, margin: "12px 0 16px", cursor: "pointer" }}>
-                    <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ marginTop: 3, accentColor: A }} />
+                    <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ width: 22, height: 22, minWidth: 22, marginTop: 2, accentColor: A, flexShrink: 0, cursor: "pointer" }} />
                     <span style={{ color: "#94A3B8", fontSize: 12, lineHeight: 1.5 }}>
                       Ich stimme der <Link href="/datenschutz" target="_blank" rel="noopener" style={{ color: A }}>Datenschutzerklärung</Link> zu und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden.
                     </span>

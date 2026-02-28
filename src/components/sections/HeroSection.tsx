@@ -58,7 +58,7 @@ export default function HeroSection() {
       <button
         ref={playBtnRef}
         onClick={togglePlay}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-[rgba(255,255,255,0.08)] backdrop-blur-xl border border-[rgba(255,255,255,0.15)] text-white flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer group"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-[rgba(255,255,255,0.08)] backdrop-blur-xl border border-[rgba(255,255,255,0.15)] text-white flex items-center justify-center opacity-30 sm:opacity-0 sm:hover:opacity-100 transition-opacity duration-300 cursor-pointer group"
         aria-label="Video steuern"
       >
         <Play size={24} className="group-hover:hidden" />
@@ -124,7 +124,7 @@ export default function HeroSection() {
                   <span className="block text-2xl sm:text-3xl lg:text-4xl font-bold text-white stat-number">
                     {stat.value}
                   </span>
-                  <span className="text-[11px] sm:text-xs text-[rgba(255,255,255,0.45)] mt-1 block tracking-wide">
+                  <span className="text-xs text-[rgba(255,255,255,0.45)] mt-1 block tracking-wide">
                     {stat.label}
                   </span>
                 </div>

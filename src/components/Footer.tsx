@@ -162,7 +162,7 @@ export default function Footer() {
                   <Link
                     key={s.href}
                     href={s.href}
-                    className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5"
+                    className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-2.5"
                   >
                     {s.label}
                   </Link>
@@ -217,7 +217,7 @@ export default function Footer() {
             <p className="text-[11px] font-semibold text-[rgba(255,255,255,0.3)] uppercase tracking-[0.15em] mb-3">
               Mitarbeitergewinnung in der Region
             </p>
-            <nav className="flex flex-wrap gap-x-3 gap-y-0.5" aria-label="Regionale Seiten">
+            <nav className="flex flex-wrap gap-x-3 gap-y-1" aria-label="Regionale Seiten">
               {regionLinks.map((r, i) => (
                 <span key={r.href} className="flex items-center gap-3">
                   <Link

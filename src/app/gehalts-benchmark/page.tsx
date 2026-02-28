@@ -38,11 +38,11 @@ export default function GehaltsBenchmark() {
               <label style={{ fontSize: 13, fontWeight: 600, color: "#023B5B", display: "block", marginBottom: 6 }}>Ihre Branche</label>
               <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 16 }}>
                 {branches.map(b => (
-                  <button key={b} onClick={() => setBranche(b)} style={{ padding: "6px 14px", borderRadius: 16, fontSize: 12, border: branche === b ? "2px solid #023B5B" : "1.5px solid #ddd", background: branche === b ? "#E8F4FD" : "#fff", color: branche === b ? "#023B5B" : "#64748B", fontWeight: branche === b ? 600 : 400, cursor: "pointer" }}>{b}</button>
+                  <button key={b} onClick={() => setBranche(b)} style={{ padding: "10px 16px", borderRadius: 16, fontSize: 13, border: branche === b ? "2px solid #023B5B" : "1.5px solid #ddd", background: branche === b ? "#E8F4FD" : "#fff", color: branche === b ? "#023B5B" : "#64748B", fontWeight: branche === b ? 600 : 400, cursor: "pointer", minHeight: 44 }}>{b}</button>
                 ))}
               </div>
               <label style={{ fontSize: 13, fontWeight: 600, color: "#023B5B", display: "block", marginBottom: 6 }}>Ihre E-Mail</label>
-              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="ihre@email.de" style={{ width: "100%", padding: "12px 16px", borderRadius: 10, border: "1.5px solid #ddd", fontSize: 15, outline: "none", boxSizing: "border-box", color: "#023B5B", marginBottom: 16 }} />
+              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="ihre@email.de" style={{ width: "100%", padding: "12px 16px", borderRadius: 10, border: "1.5px solid #ddd", fontSize: 16, outline: "none", boxSizing: "border-box", color: "#023B5B", marginBottom: 16 }} />
               <button onClick={handleSubmit} style={{ width: "100%", padding: "14px", borderRadius: 10, border: "none", background: "#1B98E0", color: "#ffffff", fontSize: 16, fontWeight: 700, cursor: "pointer" }}>Benchmark kostenlos erhalten →</button>
               <p style={{ textAlign: "center", fontSize: 11, color: "#94A3B8", marginTop: 8 }}>Kein Spam · Sofortiger Download · DSGVO-konform</p>
             </div>

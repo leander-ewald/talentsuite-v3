@@ -151,7 +151,7 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
         className="bp-hero"
         style={{
           background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)",
-          padding: "48px 16px 56px",
+          padding: "80px 16px 56px",
           position: "relative",
           overflow: "hidden",
         }}

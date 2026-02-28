@@ -160,7 +160,7 @@ export default function KostenrechnerPage() {
                   </div>
                   <input type="range" min={sl.min} max={sl.max} step={sl.stepVal} value={sl.val}
                     onChange={e => setFormData(f => ({...f, [sl.key]: Number(e.target.value)}))}
-                    style={{ width: "100%", accentColor: A, height: 12, cursor: "pointer" }} />
+                    style={{ width: "100%", accentColor: A, height: 12, cursor: "pointer", padding: "16px 0" }} />
                   <div style={{ display: "flex", justifyContent: "space-between", marginTop: 4 }}>
                     <span style={{ color: `${W}40`, fontSize: 11 }}>{sl.minL}</span>
                     <span style={{ color: `${W}40`, fontSize: 11 }}>{sl.maxL}</span>

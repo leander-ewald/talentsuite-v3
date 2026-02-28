@@ -150,7 +150,7 @@ export default function Header() {
         }`}
       >
         <div
-          className="flex flex-col items-center justify-center h-full gap-5 px-6"
+          className="flex flex-col items-center justify-center h-full gap-5 px-6 overflow-y-auto"
           style={{ paddingTop: "env(safe-area-inset-top)", paddingBottom: "env(safe-area-inset-bottom)", paddingLeft: "max(24px, env(safe-area-inset-left))", paddingRight: "max(24px, env(safe-area-inset-right))" }}
         >
           <Link href="/" className="text-xl font-semibold text-white" onClick={() => setMobileOpen(false)}>
