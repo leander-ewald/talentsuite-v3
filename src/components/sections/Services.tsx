@@ -60,34 +60,9 @@ export default function Services() {
           </h2>
         </div>
 
-        {/* Featured first service */}
-        <div className="mb-6">
-          <Link href={serviceData[0].link} className="block card-glass p-6 sm:p-8 lg:p-10 group">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 lg:gap-12 items-center">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl bg-[rgba(27,152,224,0.1)] border border-[rgba(27,152,224,0.15)] flex items-center justify-center text-[var(--color-accent)]">
-                    <Users size={20} />
-                  </div>
-                  <span className="badge">{serviceData[0].badge}</span>
-                </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 group-hover:text-[var(--color-accent)] transition-colors">
-                  {serviceData[0].title}
-                </h3>
-                <p className="text-sm sm:text-base text-[rgba(255,255,255,0.5)] leading-relaxed max-w-xl">
-                  {serviceData[0].desc}
-                </p>
-              </div>
-              <div className="w-12 h-12 rounded-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] flex items-center justify-center text-[rgba(255,255,255,0.4)] group-hover:text-white group-hover:border-[var(--color-accent)] group-hover:bg-[rgba(27,152,224,0.1)] transition-all shrink-0">
-                <ArrowUpRight size={20} />
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/* Grid of remaining services */}
+        {/* Grid of all services — 2x3 on desktop, 2 cols on tablet, 1 col on mobile */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
-          {serviceData.slice(1).map((service, i) => {
+          {serviceData.map((service, i) => {
             const Icon = service.icon;
             return (
               <Link key={i} href={service.link} className="card-glass p-5 sm:p-6 flex flex-col group">
