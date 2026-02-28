@@ -29,29 +29,71 @@ const testimonialData = [
     img: "/assets/Viktior.png",
     review: "Mit TalentSuite haben wir unser Wachstum systematisiert: neue Kundenanfragen täglich, automatisierte Abläufe und eine Webplattform, die skaliert. Die Zusammenarbeit ist strukturiert, effizient und absolut zuverlässig.",
   },
+  {
+    name: "Jan Röhrig",
+    role: "Leitung Merchandise & E-Commerce - Iserlohn Roosters",
+    from: "Iserlohn",
+    to: "Deutschland",
+    img: "/assets/Jan.png",
+    review: "TalentSuite hat unseren Onlineauftritt auf ein neues Level gehoben -- von der Shopstruktur bis zur technischen Umsetzung. Das Team versteht es, Marken digital stark und verkaufsfähig zu machen.",
+  },
+  {
+    name: "Jessica Pacha-Mollé",
+    role: "Head of HR Heizkurier GmbH",
+    from: "Köln/Bonn",
+    to: "Deutschland",
+    img: "/assets/Jessicas.png",
+    review: "Mit TalentSuite haben wir unsere Employer Brand spürbar gestärkt. Durch hochwertigen Content und gezielte Performance-Recruiting-Kampagnen setzen sie unsere Vorstellungen punktgenau um.",
+  },
 ];
 
 export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activePage, setActivePage] = useState(0);
+  const [totalPages, setTotalPages] = useState(testimonialData.length);
   const autoPlayRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pausedRef = useRef(false);
-  const activeIndexRef = useRef(0);
+  const activePageRef = useRef(0);
+  const totalPagesRef = useRef(testimonialData.length);
 
-  const scrollToIndex = useCallback((index: number) => {
+  // Calculate total pages based on how many cards fit in view
+  const updatePageCount = useCallback(() => {
+    const container = scrollRef.current;
+    if (!container || container.children.length === 0) return;
+    const firstCard = container.children[0] as HTMLElement;
+    const gap = 20; // gap-5 = 20px
+    const cardWidth = firstCard.offsetWidth + gap;
+    const visibleCards = Math.max(1, Math.floor((container.offsetWidth + gap) / cardWidth));
+    const pages = Math.max(1, testimonialData.length - visibleCards + 1);
+    setTotalPages(pages);
+    totalPagesRef.current = pages;
+    // Clamp active page if needed
+    if (activePageRef.current >= pages) {
+      setActivePage(pages - 1);
+      activePageRef.current = pages - 1;
+    }
+  }, []);
+
+  useEffect(() => {
+    updatePageCount();
+    window.addEventListener("resize", updatePageCount);
+    return () => window.removeEventListener("resize", updatePageCount);
+  }, [updatePageCount]);
+
+  const scrollToPage = useCallback((pageIndex: number) => {
     const container = scrollRef.current;
     if (!container) return;
-    const card = container.children[index] as HTMLElement;
+    const card = container.children[pageIndex] as HTMLElement;
     if (!card) return;
     container.scrollTo({
       left: card.offsetLeft - container.offsetLeft - 16,
       behavior: "smooth",
     });
-    setActiveIndex(index);
-    activeIndexRef.current = index;
+    setActivePage(pageIndex);
+    activePageRef.current = pageIndex;
   }, []);
 
-  // Detect active card from scroll position
+  // Detect active page from scroll position
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
@@ -67,22 +109,23 @@ export default function Testimonials() {
           const dist = Math.abs(child.offsetLeft - containerLeft - 16);
           if (dist < minDist) { minDist = dist; closest = i; }
         });
-        setActiveIndex(closest);
-        activeIndexRef.current = closest;
+        const page = Math.min(closest, totalPagesRef.current - 1);
+        setActivePage(page);
+        activePageRef.current = page;
       }, 80);
     };
     container.addEventListener("scroll", handleScroll, { passive: true });
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Auto-advance with pause on user interaction
+  // Auto-advance every 5s with pause on interaction
   useEffect(() => {
     const scheduleNext = () => {
       if (autoPlayRef.current) clearTimeout(autoPlayRef.current);
       autoPlayRef.current = setTimeout(() => {
         if (pausedRef.current) return;
-        const next = (activeIndexRef.current + 1) % testimonialData.length;
-        scrollToIndex(next);
+        const next = (activePageRef.current + 1) % totalPagesRef.current;
+        scrollToPage(next);
         scheduleNext();
       }, 5000);
     };
@@ -114,7 +157,7 @@ export default function Testimonials() {
       container.removeEventListener("touchstart", pause);
       container.removeEventListener("touchend", resume);
     };
-  }, [scrollToIndex]);
+  }, [scrollToPage]);
 
   const schemaOrg = {
     "@context": "https://schema.org",
@@ -216,18 +259,18 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Dots */}
+        {/* Page Dots — dynamically matches visible pages */}
         <div className="flex justify-center gap-2 mt-8">
-          {testimonialData.map((_, i) => (
+          {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}
-              onClick={() => scrollToIndex(i)}
+              onClick={() => scrollToPage(i)}
               className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                i === activeIndex
+                i === activePage
                   ? "w-8 bg-[var(--color-accent)]"
                   : "w-2 bg-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.3)]"
               }`}
-              aria-label={`Testimonial ${i + 1}`}
+              aria-label={`Seite ${i + 1}`}
             />
           ))}
         </div>
