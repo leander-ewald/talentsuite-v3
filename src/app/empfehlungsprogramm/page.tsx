@@ -112,7 +112,7 @@ export default function EmpfehlungPage() {
                 <div key={f.key}>
                   <label style={{ fontSize: 11, fontWeight: 700, letterSpacing: 0.5 }}>{f.label}</label>
                   <input placeholder={f.ph} type={f.type} value={form[f.key as keyof typeof form]} onChange={e => setForm(prev => ({ ...prev, [f.key]: e.target.value }))}
-                    style={{ width: "100%", padding: "11px 14px", borderRadius: 10, border: `2px solid ${f.key === "email" && form.email && !emailValid ? "#F87171" : f.key === "phone" && form.phone && !phoneValid ? "#F87171" : "#cdd8e0"}`, fontSize: 14, outline: "none", marginTop: 5, boxSizing: "border-box", background: W }} />
+                    style={{ width: "100%", padding: "14px 14px", borderRadius: 10, border: `2px solid ${f.key === "email" && form.email && !emailValid ? "#F87171" : f.key === "phone" && form.phone && !phoneValid ? "#F87171" : "#cdd8e0"}`, fontSize: 16, outline: "none", marginTop: 5, boxSizing: "border-box", background: W }} />
                   {f.key === "email" && form.email && !emailValid && <p style={{ color: "#F87171", fontSize: 11, marginTop: 3 }}>Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>}
                   {f.key === "phone" && form.phone && !phoneValid && <p style={{ color: "#F87171", fontSize: 11, marginTop: 3 }}>Bitte geben Sie eine gültige Telefonnummer ein.</p>}
                 </div>
@@ -121,7 +121,7 @@ export default function EmpfehlungPage() {
             <div style={{ marginTop: 12 }}>
               <label style={{ fontSize: 11, fontWeight: 700, letterSpacing: 0.5 }}>Nachricht (optional)</label>
               <textarea placeholder="Kontext zur Empfehlung..." value={form.message} onChange={e => setForm(prev => ({ ...prev, message: e.target.value }))}
-                style={{ width: "100%", padding: "11px 14px", borderRadius: 10, border: "2px solid #cdd8e0", fontSize: 14, outline: "none", marginTop: 5, minHeight: 80, resize: "vertical", boxSizing: "border-box", background: W }} />
+                style={{ width: "100%", padding: "14px 14px", borderRadius: 10, border: "2px solid #cdd8e0", fontSize: 16, outline: "none", marginTop: 5, minHeight: 80, resize: "vertical", boxSizing: "border-box", background: W }} />
             </div>
             <button onClick={() => { if (!canSubmit) return; setSent(true); fetch("/api/leadmagnet-capture", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ source: "empfehlung", name: form.name, email: form.email, phone: form.phone, extra: { referralCompany: form.company, referralContact: form.referral, message: form.message } }) }).catch(err => console.error("Lead capture error:", err)); }}
               disabled={!canSubmit}
@@ -129,7 +129,7 @@ export default function EmpfehlungPage() {
               Empfehlung einreichen →
             </button>
             <label style={{ display: "flex", alignItems: "flex-start", gap: 10, marginTop: 12, cursor: "pointer" }}>
-              <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ width: 18, height: 18, marginTop: 2, accentColor: B, flexShrink: 0 }} />
+              <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ width: 22, height: 22, minWidth: 22, marginTop: 2, accentColor: B, flexShrink: 0, cursor: "pointer" }} />
               <span style={{ color: GR, fontSize: 11, lineHeight: 1.5 }}>
                 Ich stimme der <Link href="/datenschutz" target="_blank" style={{ color: B, textDecoration: "underline" }}>Datenschutzerklärung</Link> zu und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden.
               </span>

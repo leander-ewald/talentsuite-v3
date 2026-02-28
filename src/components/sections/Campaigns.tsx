@@ -82,7 +82,7 @@ export default function Campaigns() {
         </div>
 
         {/* Bottom row: 2 cards centered */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mt-4 sm:mt-5 sm:max-w-[calc(66.666%-6px)] lg:max-w-[calc(66.666%-8px)] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mt-4 sm:mt-5 max-w-full sm:max-w-[calc(66.666%-6px)] lg:max-w-[calc(66.666%-8px)] mx-auto">
           {capabilities.slice(3).map((cap, i) => {
             const Icon = cap.icon;
             return (

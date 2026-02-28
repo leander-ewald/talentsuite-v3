@@ -70,8 +70,8 @@ export default function Services() {
                   <div className="w-10 h-10 rounded-xl bg-[rgba(27,152,224,0.08)] border border-[rgba(27,152,224,0.12)] flex items-center justify-center text-[var(--color-accent)]">
                     <Icon size={18} />
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-[rgba(255,255,255,0.04)] flex items-center justify-center text-[rgba(255,255,255,0.3)] group-hover:text-white group-hover:bg-[rgba(27,152,224,0.15)] transition-all">
-                    <ArrowUpRight size={14} />
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[rgba(255,255,255,0.04)] flex items-center justify-center text-[rgba(255,255,255,0.3)] group-hover:text-white group-hover:bg-[rgba(27,152,224,0.15)] transition-all">
+                    <ArrowUpRight size={16} />
                   </div>
                 </div>
                 <span className="badge mb-3 self-start">{service.badge}</span>

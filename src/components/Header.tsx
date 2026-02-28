@@ -151,7 +151,7 @@ export default function Header() {
       >
         <div
           className="flex flex-col items-center justify-center h-full gap-5 px-6"
-          style={{ paddingTop: "env(safe-area-inset-top)", paddingBottom: "env(safe-area-inset-bottom)" }}
+          style={{ paddingTop: "env(safe-area-inset-top)", paddingBottom: "env(safe-area-inset-bottom)", paddingLeft: "max(24px, env(safe-area-inset-left))", paddingRight: "max(24px, env(safe-area-inset-right))" }}
         >
           <Link href="/" className="text-xl font-semibold text-white" onClick={() => setMobileOpen(false)}>
             Startseite
@@ -160,7 +160,7 @@ export default function Header() {
             <Link
               key={s.href}
               href={s.href}
-              className="text-base text-[rgba(255,255,255,0.6)] hover:text-white transition-colors"
+              className="text-base text-[rgba(255,255,255,0.6)] hover:text-white transition-colors py-2 px-4 min-h-[44px] flex items-center"
               onClick={() => setMobileOpen(false)}
             >
               {s.label}

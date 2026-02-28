@@ -264,13 +264,15 @@ export default function Testimonials() {
             <button
               key={i}
               onClick={() => scrollToPage(i)}
-              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+              className="p-4 cursor-pointer group"
+              aria-label={`Seite ${i + 1}`}
+            >
+              <span className={`block h-2.5 rounded-full transition-all duration-300 ${
                 i === activePage
                   ? "w-8 bg-[var(--color-accent)]"
-                  : "w-2 bg-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.3)]"
-              }`}
-              aria-label={`Seite ${i + 1}`}
-            />
+                  : "w-2.5 bg-[rgba(255,255,255,0.15)] group-hover:bg-[rgba(255,255,255,0.3)]"
+              }`} />
+            </button>
           ))}
         </div>
       </div>

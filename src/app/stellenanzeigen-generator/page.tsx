@@ -202,17 +202,17 @@ export default function StellenanzeigenGenerator() {
               </div>
               <label data-sg="gray" style={{ display: "block", fontSize: 13, marginBottom: 4, fontWeight: 500 }}>Oder eigene Position eingeben</label>
               <input data-sg="input" value={customPosition} onChange={e => { setCustomPosition(e.target.value); setPosition(""); }} placeholder="z.B. Obermonteur Heizungstechnik"
-                style={{ width: "100%", padding: "11px 14px", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 15, fontFamily: "inherit", boxSizing: "border-box", marginBottom: 14 }} />
+                style={{ width: "100%", padding: "14px 14px", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 16, fontFamily: "inherit", boxSizing: "border-box", marginBottom: 14 }} />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
                   <label data-sg="gray" style={{ display: "block", fontSize: 13, marginBottom: 4, fontWeight: 500 }}>Firmenname</label>
                   <input data-sg="input" value={company} onChange={e => setCompany(e.target.value)} placeholder="Mustermann GmbH"
-                    style={{ width: "100%", padding: "11px 14px", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 15, fontFamily: "inherit", boxSizing: "border-box" }} />
+                    style={{ width: "100%", padding: "14px 14px", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 16, fontFamily: "inherit", boxSizing: "border-box" }} />
                 </div>
                 <div>
                   <label data-sg="gray" style={{ display: "block", fontSize: 13, marginBottom: 4, fontWeight: 500 }}>Standort</label>
                   <input data-sg="input" value={standort} onChange={e => setStandort(e.target.value)} placeholder="z.B. Dortmund"
-                    style={{ width: "100%", padding: "11px 14px", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 15, fontFamily: "inherit", boxSizing: "border-box" }} />
+                    style={{ width: "100%", padding: "14px 14px", border: "1px solid #E2E8F0", borderRadius: 8, fontSize: 16, fontFamily: "inherit", boxSizing: "border-box" }} />
                 </div>
               </div>
               <button onClick={() => setStep(2)} disabled={!position && !customPosition} data-sg={(position || customPosition) ? "btnw" : "dis"}
@@ -295,11 +295,11 @@ export default function StellenanzeigenGenerator() {
                       <div key={f.key} style={{ marginBottom: 12 }}>
                         <label data-sg="muted7" style={{ fontSize: 13, display: "block", marginBottom: 4 }}>{f.label}</label>
                         <input type={f.type || "text"} data-sg="inputw" value={form[f.key]} onChange={e => setForm(prev => ({ ...prev, [f.key]: e.target.value }))} placeholder={f.ph}
-                          style={{ width: "100%", padding: "11px 14px", background: `${W}10`, border: `1px solid ${W}20`, borderRadius: 8, fontSize: 15, fontFamily: "inherit", boxSizing: "border-box" }} />
+                          style={{ width: "100%", padding: "14px 14px", background: `${W}10`, border: `1px solid ${W}20`, borderRadius: 8, fontSize: 16, fontFamily: "inherit", boxSizing: "border-box" }} />
                       </div>
                     ))}
                     <label style={{ display: "flex", alignItems: "flex-start", gap: 8, margin: "8px 0 14px", cursor: "pointer" }}>
-                      <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ marginTop: 3, accentColor: A }} />
+                      <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ width: 22, height: 22, minWidth: 22, marginTop: 2, accentColor: A, flexShrink: 0, cursor: "pointer" }} />
                       <span data-sg="muted" style={{ fontSize: 12, lineHeight: 1.5 }}>
                         Ich stimme der <Link href="/datenschutz" target="_blank" data-sg="accent" style={{ textDecoration: "underline" }}>Datenschutzerklärung</Link> zu.
                       </span>

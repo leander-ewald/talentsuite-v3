@@ -44,7 +44,7 @@ export default function Process() {
           {/* Connecting line (desktop) */}
           <div className="hidden lg:block absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(27,152,224,0.25)] to-transparent" />
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {processData.map((step, i) => (
               <div key={i} className="relative text-center group">
                 {/* Step Number */}

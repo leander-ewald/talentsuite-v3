@@ -160,7 +160,7 @@ export default function KostenrechnerPage() {
                   </div>
                   <input type="range" min={sl.min} max={sl.max} step={sl.stepVal} value={sl.val}
                     onChange={e => setFormData(f => ({...f, [sl.key]: Number(e.target.value)}))}
-                    style={{ width: "100%", accentColor: A, height: 6, cursor: "pointer" }} />
+                    style={{ width: "100%", accentColor: A, height: 12, cursor: "pointer" }} />
                   <div style={{ display: "flex", justifyContent: "space-between", marginTop: 4 }}>
                     <span style={{ color: `${W}40`, fontSize: 11 }}>{sl.minL}</span>
                     <span style={{ color: `${W}40`, fontSize: 11 }}>{sl.maxL}</span>
@@ -217,7 +217,7 @@ export default function KostenrechnerPage() {
                           f.k === "email" && formData.email && !emailValid ? "#F87171" :
                           f.k === "phone" && formData.phone && !phoneValid ? "#F87171" : `${W}15`
                         }`,
-                        borderRadius: 10, color: W, fontSize: 15, outline: "none", fontFamily: "inherit",
+                        borderRadius: 10, color: W, fontSize: 16, outline: "none", fontFamily: "inherit",
                         boxSizing: "border-box",
                       }} />
                     {f.k === "email" && formData.email && !emailValid && (
@@ -232,7 +232,7 @@ export default function KostenrechnerPage() {
               <label style={{ display: "flex", alignItems: "flex-start", gap: 10, marginTop: 16, cursor: "pointer" }}>
                 <input type="checkbox" checked={formData.dsgvo}
                   onChange={e => setFormData(d => ({...d, dsgvo: e.target.checked}))}
-                  style={{ width: 18, height: 18, marginTop: 2, accentColor: A, flexShrink: 0 }} />
+                  style={{ width: 22, height: 22, minWidth: 22, marginTop: 2, accentColor: A, flexShrink: 0, cursor: "pointer" }} />
                 <span style={{ color: `${W}70`, fontSize: 12, lineHeight: 1.5 }}>
                   {"Ich stimme der "}
                   <Link href="/datenschutz" target="_blank" rel="noopener noreferrer" style={{ color: A, textDecoration: "underline" }}>Datenschutzerklärung</Link>

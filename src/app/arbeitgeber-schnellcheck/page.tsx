@@ -48,7 +48,7 @@ function Input({ label, value, onChange, type, placeholder, error }: { label: st
     <div style={{ marginBottom: 16 }}>
       <label style={{ display: "block", color: `${W}70`, fontSize: 13, marginBottom: 6, fontWeight: 500 }}>{label}</label>
       <input type={type || "text"} value={value} onChange={onChange} placeholder={placeholder}
-        style={{ width: "100%", padding: "12px 16px", background: `${W}08`, border: `1px solid ${error ? R : `${W}15`}`, borderRadius: 8, color: W, fontSize: 15, fontFamily: "inherit", outline: "none", boxSizing: "border-box" }} />
+        style={{ width: "100%", padding: "14px 16px", background: `${W}08`, border: `1px solid ${error ? R : `${W}15`}`, borderRadius: 8, color: W, fontSize: 16, fontFamily: "inherit", outline: "none", boxSizing: "border-box" }} />
       {error && <span style={{ color: R, fontSize: 12, marginTop: 4, display: "block" }}>{error}</span>}
     </div>
   );
@@ -159,12 +159,12 @@ export default function ArbeitgeberSchnellcheck() {
                 <button onClick={() => answer(true)} style={{
                   flex: 1, padding: "18px", borderRadius: 12, border: `2px solid ${answers[step - 1] === true ? G : `${W}15`}`,
                   background: answers[step - 1] === true ? `${G}15` : `${W}05`, color: W, fontSize: 17, fontWeight: 600,
-                  cursor: "pointer", fontFamily: "inherit", transition: "all 0.2s",
+                  cursor: "pointer", fontFamily: "inherit", transition: "all 0.2s", minHeight: 56,
                 }}>✅ Ja</button>
                 <button onClick={() => answer(false)} style={{
                   flex: 1, padding: "18px", borderRadius: 12, border: `2px solid ${answers[step - 1] === false ? R : `${W}15`}`,
                   background: answers[step - 1] === false ? `${R}15` : `${W}05`, color: W, fontSize: 17, fontWeight: 600,
-                  cursor: "pointer", fontFamily: "inherit", transition: "all 0.2s",
+                  cursor: "pointer", fontFamily: "inherit", transition: "all 0.2s", minHeight: 56,
                 }}>❌ Nein</button>
               </div>
               {step > 1 && (
@@ -192,7 +192,7 @@ export default function ArbeitgeberSchnellcheck() {
                 <Input label="Branche" value={form.branche} onChange={e => setForm(f => ({ ...f, branche: e.target.value }))} placeholder="z.B. Handwerk, Pflege" />
               </div>
               <label style={{ display: "flex", alignItems: "flex-start", gap: 10, marginTop: 8, cursor: "pointer" }}>
-                <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ marginTop: 4, accentColor: A }} />
+                <input type="checkbox" checked={dsgvo} onChange={e => setDsgvo(e.target.checked)} style={{ width: 22, height: 22, minWidth: 22, marginTop: 2, accentColor: A, flexShrink: 0, cursor: "pointer" }} />
                 <span style={{ color: `${W}60`, fontSize: 12, lineHeight: 1.5 }}>
                   Ich stimme der <Link href="/datenschutz" target="_blank" rel="noopener" style={{ color: A }}>Datenschutzerklärung</Link> zu und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden. Ich kann meine Einwilligung jederzeit widerrufen.
                 </span>

@@ -40,7 +40,7 @@ export default function PreisePage() {
                     <span style={{ color: "#4A5568", fontSize: 13, lineHeight: 1.4 }}>{f}</span>
                   </div>
                 ))}
-                <Link href="/recruiting-analyse" style={{ display: "block", textAlign: "center", marginTop: 20, padding: "12px 20px", borderRadius: 10, textDecoration: "none", fontWeight: 700, fontSize: 14, background: p.popular ? "#1B98E0" : "#023B5B", color: "#ffffff" }}>
+                <Link href="/recruiting-analyse" style={{ display: "block", textAlign: "center", marginTop: 20, padding: "14px 20px", borderRadius: 10, textDecoration: "none", fontWeight: 700, fontSize: 15, background: p.popular ? "#1B98E0" : "#023B5B", color: "#ffffff", minHeight: 48 }}>
                   {p.popular ? "Jetzt beraten lassen" : p.name === "Starter" ? "Jetzt starten" : "Angebot anfordern"} →
                 </Link>
               </div>

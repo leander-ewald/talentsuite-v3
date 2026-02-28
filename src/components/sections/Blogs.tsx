@@ -56,8 +56,8 @@ export default function Blogs() {
                   <Clock size={12} />
                   {blog.reading}
                 </span>
-                <div className="w-8 h-8 rounded-full bg-[rgba(255,255,255,0.04)] flex items-center justify-center text-[rgba(255,255,255,0.3)] group-hover:text-white group-hover:bg-[rgba(27,152,224,0.15)] transition-all">
-                  <ArrowUpRight size={14} />
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[rgba(255,255,255,0.04)] flex items-center justify-center text-[rgba(255,255,255,0.3)] group-hover:text-white group-hover:bg-[rgba(27,152,224,0.15)] transition-all">
+                  <ArrowUpRight size={16} />
                 </div>
               </div>
               <h3 className="text-lg font-semibold mb-3 leading-snug group-hover:text-[var(--color-accent)] transition-colors">

@@ -146,7 +146,7 @@ export default function Footer() {
           <div className="h-px bg-[rgba(255,255,255,0.06)] mb-14" />
 
           {/* Grid: 4 columns */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-16 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-16 mb-14">
             <div>
               <h4 className="text-[13px] font-semibold text-white uppercase tracking-wider mb-5">Über TalentSuite</h4>
               <p className="text-sm text-[rgba(255,255,255,0.45)] leading-relaxed">
@@ -157,12 +157,12 @@ export default function Footer() {
 
             <div>
               <h4 className="text-[13px] font-semibold text-white uppercase tracking-wider mb-5">Dienstleistungen</h4>
-              <nav className="flex flex-col gap-3" aria-label="Services Navigation">
+              <nav className="flex flex-col gap-1" aria-label="Services Navigation">
                 {serviceLinks.map((s) => (
                   <Link
                     key={s.href}
                     href={s.href}
-                    className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200"
+                    className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5"
                   >
                     {s.label}
                   </Link>
@@ -172,24 +172,24 @@ export default function Footer() {
 
             <div>
               <h4 className="text-[13px] font-semibold text-white uppercase tracking-wider mb-5">Ressourcen</h4>
-              <nav className="flex flex-col gap-3">
-                <Link href="/blog" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200">
+              <nav className="flex flex-col gap-1">
+                <Link href="/blog" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5">
                   Blog
                 </Link>
-                <Link href="/so-funktionierts" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200">
+                <Link href="/so-funktionierts" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5">
                   So funktioniert&apos;s
                 </Link>
-                <Link href="/preise" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200">
+                <Link href="/preise" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5">
                   Preise
                 </Link>
-                <Link href="/case-studies" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200">
+                <Link href="/case-studies" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5">
                   Case Studies
                 </Link>
                 <a
                   href="https://calendar.app.google/QFoADWcRwwuYUoky8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200"
+                  className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5"
                 >
                   Termin buchen
                 </a>
@@ -217,12 +217,12 @@ export default function Footer() {
             <p className="text-[11px] font-semibold text-[rgba(255,255,255,0.3)] uppercase tracking-[0.15em] mb-3">
               Mitarbeitergewinnung in der Region
             </p>
-            <nav className="flex flex-wrap gap-x-3 gap-y-1.5" aria-label="Regionale Seiten">
+            <nav className="flex flex-wrap gap-x-3 gap-y-0.5" aria-label="Regionale Seiten">
               {regionLinks.map((r, i) => (
                 <span key={r.href} className="flex items-center gap-3">
                   <Link
                     href={r.href}
-                    className="text-xs text-[rgba(255,255,255,0.35)] hover:text-white transition-colors duration-200"
+                    className="text-xs text-[rgba(255,255,255,0.35)] hover:text-white transition-colors duration-200 py-1.5"
                   >
                     {r.label}
                   </Link>
@@ -237,14 +237,14 @@ export default function Footer() {
             <p className="text-xs text-[rgba(255,255,255,0.3)]">
               &copy; {currentYear} TalentSuite &mdash; Alle Rechte vorbehalten.
             </p>
-            <div className="flex items-center gap-6 text-xs text-[rgba(255,255,255,0.3)]">
-              <Link href="/datenschutz" className="hover:text-white transition-colors duration-200">
+            <div className="flex items-center gap-4 sm:gap-6 text-xs text-[rgba(255,255,255,0.3)]">
+              <Link href="/datenschutz" className="hover:text-white transition-colors duration-200 py-2">
                 Datenschutz
               </Link>
-              <Link href="/agb" className="hover:text-white transition-colors duration-200">
+              <Link href="/agb" className="hover:text-white transition-colors duration-200 py-2">
                 AGB
               </Link>
-              <Link href="/impressum" className="hover:text-white transition-colors duration-200">
+              <Link href="/impressum" className="hover:text-white transition-colors duration-200 py-2">
                 Impressum
               </Link>
             </div>

@@ -70,15 +70,15 @@ export default function CookieConsent() {
         )}
 
         <div className="flex flex-col sm:flex-row gap-2.5 mt-4">
-          <button onClick={acceptAll} className="btn-primary sm:flex-1 justify-center !py-3 !text-sm">
+          <button onClick={acceptAll} className="btn-primary sm:flex-1 justify-center !py-3.5 !text-sm min-h-[48px]">
             Alle akzeptieren
           </button>
-          <button onClick={acceptEssential} className="btn-outline sm:flex-1 justify-center !py-3 !text-sm">
+          <button onClick={acceptEssential} className="btn-outline sm:flex-1 justify-center !py-3.5 !text-sm min-h-[48px]">
             Nur notwendige
           </button>
           <button
             onClick={() => setDetails(!details)}
-            className="px-4 py-3 text-sm text-[rgba(255,255,255,0.4)] hover:text-white bg-transparent border-none cursor-pointer transition-colors"
+            className="px-4 py-3.5 text-sm text-[rgba(255,255,255,0.4)] hover:text-white bg-transparent border-none cursor-pointer transition-colors min-h-[48px]"
           >
             {details ? "Weniger" : "Details"}
           </button>

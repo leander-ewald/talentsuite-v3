@@ -49,7 +49,7 @@ export default function SoFunktionierts() {
         <div className="p-6 sm:p-10" style={{ background: "linear-gradient(135deg, #011E2F, #023B5B)", borderRadius: 16, textAlign: "center", marginTop: 12 }}>
           <h2 className="text-[20px] md:text-[26px]" style={{ color: "#ffffff", fontWeight: 700, margin: "0 0 8px" }}>Bereit für Schritt 1?</h2>
           <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 15, margin: "0 0 20px" }}>Kostenlose Recruiting-Analyse — 20 Minuten, keine Verpflichtung</p>
-          <Link href="/recruiting-analyse" className="text-sm sm:text-base" style={{ display: "inline-block", padding: "12px 24px", borderRadius: 10, background: "#1B98E0", color: "#ffffff", fontWeight: 700, textDecoration: "none" }}>Jetzt Analyse starten →</Link>
+          <Link href="/recruiting-analyse" className="text-sm sm:text-base" style={{ display: "inline-block", padding: "14px 28px", borderRadius: 10, background: "#1B98E0", color: "#ffffff", fontWeight: 700, textDecoration: "none", minHeight: 48 }}>Jetzt Analyse starten →</Link>
         </div>
       </div>
     </div>

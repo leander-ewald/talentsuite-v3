@@ -455,9 +455,20 @@ a {
 
   .faq-button {
     padding: 16px 20px;
+    min-height: 48px;
+  }
+
+  .faq-icon {
+    width: 44px;
+    height: 44px;
   }
 
   .faq-answer-inner {
     padding: 0 20px 16px;
+  }
+
+  .btn-primary, .btn-outline {
+    min-height: 48px;
+    padding: 14px 24px;
   }
 }

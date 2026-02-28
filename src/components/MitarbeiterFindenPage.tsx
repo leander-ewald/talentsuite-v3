@@ -96,7 +96,7 @@ const BP_STYLES = `
 #bp-root .bp-cta button { color: #ffffff !important; font-size: 15px !important; border: 1px solid rgba(255,255,255,0.3) !important; }
 #bp-root .bp-cta label { color: rgba(255,255,255,0.5) !important; font-size: 12px !important; }
 #bp-root .bp-cta label a { color: #1B98E0 !important; background: none !important; font-size: 12px !important; font-weight: 400 !important; }
-#bp-root .bp-cta input { color: #ffffff !important; font-size: 15px !important; background: rgba(255,255,255,0.08) !important; border: 1px solid rgba(255,255,255,0.15) !important; }
+#bp-root .bp-cta input { color: #ffffff !important; font-size: 16px !important; background: rgba(255,255,255,0.08) !important; border: 1px solid rgba(255,255,255,0.15) !important; }
 #bp-root .bp-cta input::placeholder { color: rgba(255,255,255,0.4) !important; }
 #bp-root .bp-cta .bp-form-label { color: rgba(255,255,255,0.7) !important; font-size: 13px !important; }
 #bp-root .bp-cta .bp-submit { font-size: 16px !important; font-weight: 700 !important; }
@@ -462,14 +462,15 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
                 <button
                   onClick={() => setShowForm(true)}
                   style={{
-                    padding: "14px 32px",
+                    padding: "16px 32px",
                     background: "none",
                     border: "1px solid rgba(255,255,255,0.3)",
                     borderRadius: 10,
                     color: "#ffffff",
-                    fontSize: 15,
+                    fontSize: 16,
                     cursor: "pointer",
                     fontFamily: "inherit",
+                    minHeight: 48,
                   }}
                 >
                   R&uuml;ckruf anfordern
@@ -504,12 +505,12 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
                       placeholder={f.ph}
                       style={{
                         width: "100%",
-                        padding: "12px 14px",
+                        padding: "14px 14px",
                         background: "rgba(255,255,255,0.08)",
                         border: "1px solid rgba(255,255,255,0.15)",
                         borderRadius: 8,
                         color: "#ffffff",
-                        fontSize: 15,
+                        fontSize: 16,
                         fontFamily: "inherit",
                         boxSizing: "border-box",
                         outline: "none",
@@ -536,7 +537,7 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
                     type="checkbox"
                     checked={dsgvo}
                     onChange={(e) => setDsgvo(e.target.checked)}
-                    style={{ marginTop: 3, accentColor: "#1B98E0" }}
+                    style={{ width: 22, height: 22, minWidth: 22, marginTop: 2, accentColor: "#1B98E0", flexShrink: 0, cursor: "pointer" }}
                   />
                   <span style={{ color: "rgba(255,255,255,0.5)", fontSize: 12, lineHeight: 1.5 }}>
                     Ich stimme der{" "}
