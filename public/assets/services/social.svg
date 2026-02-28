@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="16" fill="#0d1f30"/>
+  <rect x="140" y="50" width="120" height="180" rx="14" stroke="#1B98E0" stroke-width="1.5" fill="rgba(27,152,224,0.04)"/>
+  <rect x="180" y="55" width="40" height="5" rx="2.5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="150" y="70" width="100" height="100" rx="4" fill="rgba(27,152,224,0.08)"/>
+  <circle cx="200" cy="120" r="20" stroke="rgba(27,152,224,0.3)" stroke-width="1" fill="rgba(27,152,224,0.06)"/>
+  <path d="M192 120 L204 112 L204 128Z" fill="rgba(27,152,224,0.4)"/>
+  <rect x="155" y="180" width="28" height="28" rx="6" fill="rgba(27,152,224,0.1)"/>
+  <rect x="190" y="180" width="28" height="28" rx="6" fill="rgba(239,68,68,0.08)"/>
+  <rect x="225" y="180" width="28" height="28" rx="6" fill="rgba(27,152,224,0.08)"/>
+  <rect x="155" y="215" width="90" height="5" rx="2.5" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="70" cy="100" r="8" fill="rgba(27,152,224,0.15)"/>
+  <circle cx="50" cy="150" r="6" fill="rgba(27,152,224,0.1)"/>
+  <circle cx="85" cy="180" r="5" fill="rgba(27,152,224,0.08)"/>
+  <path d="M78 100 L140 90" stroke="rgba(27,152,224,0.15)" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="340" cy="110" r="6" fill="rgba(27,152,224,0.12)"/>
+  <circle cx="355" cy="155" r="8" fill="rgba(27,152,224,0.1)"/>
+  <circle cx="325" cy="190" r="5" fill="rgba(27,152,224,0.07)"/>
+  <path d="M340 116 L260 120" stroke="rgba(27,152,224,0.12)" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="60" cy="50" r="20" fill="rgba(27,152,224,0.04)"/>
+  <text x="200" y="270" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="11" font-family="system-ui">Social Media</text>
+</svg>

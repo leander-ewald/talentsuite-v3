@@ -39,7 +39,7 @@ export default function TrustedBrands() {
         <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
         <div className="scroll-row scroll-left">
-          {[...logos, ...logos].map((logo, i) => (
+          {[...logos, ...logos, ...logos].map((logo, i) => (
             <div key={`top-${i}`} className="scroll-item">
               <img src={logo.src} alt={logo.alt} loading="lazy" />
             </div>
@@ -52,7 +52,7 @@ export default function TrustedBrands() {
         <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
         <div className="scroll-row scroll-right">
-          {[...logos2, ...logos2].map((logo, i) => (
+          {[...logos2, ...logos2, ...logos2].map((logo, i) => (
             <div key={`bottom-${i}`} className="scroll-item">
               <img src={logo.src} alt={logo.alt} loading="lazy" />
             </div>

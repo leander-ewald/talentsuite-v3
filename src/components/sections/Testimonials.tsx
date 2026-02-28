@@ -29,22 +29,6 @@ const testimonialData = [
     img: "/assets/Viktior.png",
     review: "Mit TalentSuite haben wir unser Wachstum systematisiert: neue Kundenanfragen täglich, automatisierte Abläufe und eine Webplattform, die skaliert. Die Zusammenarbeit ist strukturiert, effizient und absolut zuverlässig.",
   },
-  {
-    name: "Jan Röhrig",
-    role: "Leitung Merchandise & E-Commerce - Iserlohn Roosters",
-    from: "Iserlohn",
-    to: "Deutschland",
-    img: "/assets/Jan.png",
-    review: "TalentSuite hat unseren Onlineauftritt auf ein neues Level gehoben -- von der Shopstruktur bis zur technischen Umsetzung. Das Team versteht es, Marken digital stark und verkaufsfähig zu machen.",
-  },
-  {
-    name: "Jessica Pacha-Mollé",
-    role: "Head of HR Heizkurier GmbH",
-    from: "Köln/Bonn",
-    to: "Deutschland",
-    img: "/assets/Jessicas.png",
-    review: "Mit TalentSuite haben wir unsere Employer Brand spürbar gestärkt. Durch hochwertigen Content und gezielte Performance-Recruiting-Kampagnen setzen sie unsere Vorstellungen punktgenau um.",
-  },
 ];
 
 export default function Testimonials() {
