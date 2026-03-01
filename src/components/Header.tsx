@@ -123,12 +123,12 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Desktop CTA */}
+            {/* Desktop CTA — !hidden / !inline-flex to override btn-primary display */}
             <Link
               href="https://calendar.app.google/QFoADWcRwwuYUoky8"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:inline-flex btn-primary !py-2.5 !px-6 !text-sm"
+              className="!hidden lg:!inline-flex btn-primary !py-2.5 !px-6 !text-sm"
             >
               Erstgespräch vereinbaren
               <ArrowRight size={16} />
