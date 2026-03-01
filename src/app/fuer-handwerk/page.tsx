@@ -102,15 +102,15 @@ export default function HandwerkHub() {
                 className="fuer-card"
               >
                 <style>{`@media(min-width:768px){.fuer-card{padding:20px 20px !important}}`}</style>
-                <h3 style={{ color: "#023B5B", fontSize: 16, fontWeight: 700, margin: "0 0 8px" }}>
+                <h3 style={{ color: "#023B5B", fontSize: 16, fontWeight: 700, margin: "0 0 8px", textAlign: "center" }}>
                   {p.name}
                 </h3>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
-                  <div>
+                <div style={{ display: "flex", justifyContent: "center", gap: 20 }}>
+                  <div style={{ textAlign: "center" }}>
                     <span style={{ color: "#1B98E0", fontWeight: 700 }}>{p.stellen}</span>
                     <span style={{ color: "#94A3B8", fontSize: 12 }}> offene Stellen</span>
                   </div>
-                  <div>
+                  <div style={{ textAlign: "center" }}>
                     <span style={{ color: "#10B981", fontWeight: 700 }}>{p.cpa}</span>
                     <span style={{ color: "#94A3B8", fontSize: 12 }}> pro Bewerbung</span>
                   </div>
