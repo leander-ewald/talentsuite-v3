@@ -21,7 +21,7 @@ const rows = [
 export default function VergleichPage() {
   return (
     <div style={{ background: "#f0f4f7", minHeight: "100vh" }}>
-      <div style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", padding: "72px 24px 80px", textAlign: "center" }}>
+      <div className="px-4 sm:px-6" style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", paddingTop: 96, paddingBottom: 80, textAlign: "center" }}>
         <h1 className="text-[24px] md:text-[38px]" style={{ color: "#ffffff", fontWeight: 800, margin: "0 0 12px", lineHeight: 1.15 }}>
           Jobbörse vs. <span style={{ color: "#1B98E0" }}>Performance Recruiting</span>
         </h1>

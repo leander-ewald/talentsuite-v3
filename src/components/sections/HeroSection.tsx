@@ -110,9 +110,9 @@ export default function HeroSection() {
             </p>
 
             {/* Partner Badges */}
-            <div className="flex items-center gap-4 sm:gap-6 mt-8">
-              <img src="/assets/meta-logo.svg" alt="Offizieller Meta Business Partner" className="h-10 sm:h-12 rounded-lg opacity-80 hover:opacity-100 transition-opacity" />
-              <img src="/assets/google-logo.svg" alt="Google Partner Agentur" className="h-10 sm:h-12 rounded-lg opacity-80 hover:opacity-100 transition-opacity" />
+            <div className="flex items-center gap-3 sm:gap-6 mt-8">
+              <img src="/assets/meta-logo.svg" alt="Offizieller Meta Business Partner" className="h-8 sm:h-12 rounded-lg opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/assets/google-logo.svg" alt="Google Partner Agentur" className="h-8 sm:h-12 rounded-lg opacity-80 hover:opacity-100 transition-opacity" />
             </div>
           </div>
 

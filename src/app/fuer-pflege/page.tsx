@@ -22,12 +22,12 @@ export default function PflegeHub() {
       <div
         style={{
           background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)",
-          padding: "48px 16px 56px",
+          padding: "96px 16px 56px",
           textAlign: "center",
         }}
         className="fuer-hero"
       >
-        <style>{`@media(min-width:768px){.fuer-hero{padding:72px 24px 80px !important}}`}</style>
+        <style>{`@media(min-width:768px){.fuer-hero{padding:96px 24px 80px !important}}`}</style>
         <div
           style={{
             display: "inline-block",

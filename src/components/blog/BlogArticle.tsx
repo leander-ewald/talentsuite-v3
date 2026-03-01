@@ -60,7 +60,7 @@ const BlogArticle = ({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
 
-      <section className="section" style={{ paddingBottom: "1rem" }}>
+      <section className="section" style={{ paddingTop: "7rem", paddingBottom: "1rem" }}>
         <div className="container max-w-3xl">
           <div style={{ marginBottom: "0.75rem", display: "flex", gap: "0.75rem", flexWrap: "wrap", alignItems: "center" }}>
             {category && <span className="badge">{category}</span>}

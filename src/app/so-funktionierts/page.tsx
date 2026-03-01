@@ -17,7 +17,7 @@ const steps = [
 export default function SoFunktionierts() {
   return (
     <div style={{ background: "#f0f4f7", minHeight: "100vh" }}>
-      <div className="px-4 sm:px-6 pt-20 sm:pt-24 pb-12 sm:pb-16" style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", textAlign: "center" }}>
+      <div className="px-4 sm:px-6 pt-24 sm:pt-28 pb-12 sm:pb-16" style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", textAlign: "center" }}>
         <h1 className="text-[22px] sm:text-[26px] md:text-[40px]" style={{ color: "#ffffff", fontWeight: 800, margin: "0 0 12px", lineHeight: 1.2 }}>
           So funktioniert <span style={{ color: "#1B98E0" }}>Performance Recruiting</span>
         </h1>

@@ -105,6 +105,7 @@
 /* ── Page Layout ── */
 .page {
   min-height: 100vh;
+  padding-top: 64px;
   background: #F0F4F7 !important;
   font-family: 'Poppins', sans-serif;
   color: #1E2D3A !important;

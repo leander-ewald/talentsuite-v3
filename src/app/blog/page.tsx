@@ -71,9 +71,9 @@ export default function BlogPage() {
           <p className="text-base md:text-lg text-[rgba(255,255,255,0.6)] mb-6">Praxiswissen aus über 100 Projekten: Performance Recruiting, Neukundengewinnung, Social Media Marketing und Employer Branding für KMU im DACH-Raum.</p>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "2rem" }}>
-            <button onClick={() => setFilter("Alle")} style={{ padding: "6px 16px", borderRadius: "20px", border: filter === "Alle" ? "2px solid var(--color-accent)" : "1px solid rgba(255,255,255,0.15)", background: filter === "Alle" ? "var(--color-accent)" : "rgba(255,255,255,0.05)", color: filter === "Alle" ? "white" : "rgba(255,255,255,0.7)", fontWeight: "600", fontSize: "0.85rem", cursor: "pointer" }}>Alle ({blogArticles.length})</button>
+            <button onClick={() => setFilter("Alle")} style={{ padding: "8px 16px", borderRadius: "20px", border: filter === "Alle" ? "2px solid var(--color-accent)" : "1px solid rgba(255,255,255,0.15)", background: filter === "Alle" ? "var(--color-accent)" : "rgba(255,255,255,0.05)", color: filter === "Alle" ? "white" : "rgba(255,255,255,0.7)", fontWeight: "600", fontSize: "0.85rem", cursor: "pointer", minHeight: 44 }}>Alle ({blogArticles.length})</button>
             {categories.map(cat => (
-              <button key={cat} onClick={() => setFilter(cat)} style={{ padding: "6px 16px", borderRadius: "20px", border: filter === cat ? "2px solid var(--color-accent)" : "1px solid rgba(255,255,255,0.15)", background: filter === cat ? "var(--color-accent)" : "rgba(255,255,255,0.05)", color: filter === cat ? "white" : "rgba(255,255,255,0.7)", fontWeight: "500", fontSize: "0.85rem", cursor: "pointer" }}>{cat}</button>
+              <button key={cat} onClick={() => setFilter(cat)} style={{ padding: "8px 16px", borderRadius: "20px", border: filter === cat ? "2px solid var(--color-accent)" : "1px solid rgba(255,255,255,0.15)", background: filter === cat ? "var(--color-accent)" : "rgba(255,255,255,0.05)", color: filter === cat ? "white" : "rgba(255,255,255,0.7)", fontWeight: "500", fontSize: "0.85rem", cursor: "pointer", minHeight: 44 }}>{cat}</button>
             ))}
           </div>
 

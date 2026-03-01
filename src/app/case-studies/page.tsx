@@ -19,7 +19,7 @@ export default function CaseStudiesPage() {
 
   return (
     <div style={{ background: "#f0f4f7", minHeight: "100vh" }}>
-      <div style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", padding: "72px 24px 80px", textAlign: "center" }}>
+      <div className="px-4 sm:px-6" style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", paddingTop: 96, paddingBottom: 80, textAlign: "center" }}>
         <div style={{ display: "inline-block", padding: "5px 18px", borderRadius: 20, marginBottom: 16, background: "rgba(27,152,224,0.15)" }}>
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 3, color: "#1B98E0" }}>ECHTE ERGEBNISSE</span>
         </div>
@@ -36,7 +36,7 @@ export default function CaseStudiesPage() {
             <button key={b} onClick={() => setFilter(b)} style={{
               padding: "8px 18px", borderRadius: 20, border: filter === b ? "2px solid #023B5B" : "1.5px solid #ddd",
               background: filter === b ? "#E8F4FD" : "#ffffff", color: filter === b ? "#023B5B" : "#64748B",
-              fontSize: 13, fontWeight: filter === b ? 600 : 400, cursor: "pointer",
+              fontSize: 13, fontWeight: filter === b ? 600 : 400, cursor: "pointer", minHeight: 44,
             }}>
               {filter === b && "✓ "}{b}
             </button>

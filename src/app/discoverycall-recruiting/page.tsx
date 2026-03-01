@@ -142,7 +142,7 @@ function SopTool() {
   const getBtnText = () => submitting ? "⏳ Senden..." : submitResult === "success" ? "✅ ClickUp-Doc erstellt!" : submitResult === "error" ? "❌ Fehler – Nochmal?" : "🚀 ClickUp-Doc erstellen";
 
   return (
-    <div style={{ background: "#f0f4f7", padding: mob ? "16px 0 40px" : "28px 0 60px", minHeight: "70vh" }}>
+    <div style={{ background: "#f0f4f7", padding: mob ? "96px 0 40px" : "96px 0 60px", minHeight: "70vh" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: mob ? "0 12px" : "0 16px", display: "flex", flexDirection: mob ? "column" : "row", gap: mob ? 12 : 24 }}>
         {mob ? (
           <div style={{ background: W, borderRadius: 12, padding: "10px 6px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>

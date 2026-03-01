@@ -57,7 +57,7 @@ export default function Header() {
       <div
         className={`sm:mx-5 sm:mt-4 sm:rounded-2xl transition-all duration-300 ${
           scrolled
-            ? "bg-[rgba(9,22,34,0.92)] backdrop-blur-xl sm:border sm:border-[rgba(255,255,255,0.06)] sm:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+            ? "bg-[rgba(9,22,34,0.95)] backdrop-blur-xl border-b border-b-[rgba(255,255,255,0.08)] shadow-[0_4px_16px_rgba(0,0,0,0.3)] sm:border-b-0 sm:shadow-none sm:border sm:border-[rgba(255,255,255,0.06)] sm:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
             : "bg-transparent"
         }`}
         style={{ paddingTop: "env(safe-area-inset-top)" }}

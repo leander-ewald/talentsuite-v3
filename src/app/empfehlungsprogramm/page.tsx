@@ -40,7 +40,7 @@ export default function EmpfehlungPage() {
 
   return (
     <div style={{ background: L, minHeight: "60vh" }}>
-      <div style={{ background: "linear-gradient(135deg, #011E2F, #023B5B)", padding: "52px 20px 72px", textAlign: "center" }}>
+      <div className="px-4 sm:px-6" style={{ background: "linear-gradient(135deg, #011E2F, #023B5B)", paddingTop: 96, paddingBottom: 72, textAlign: "center" }}>
         <div style={{ display: "inline-block", padding: "5px 18px", borderRadius: 20, marginBottom: 16, background: `${G}22` }}>
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 3, color: G }}>EMPFEHLUNGSPROGRAMM</span>
         </div>

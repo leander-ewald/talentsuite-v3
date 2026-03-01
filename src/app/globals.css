@@ -126,6 +126,16 @@ body {
   border-radius: 2px;
 }
 
+/* Centered section-labels: balance the ::before with a matching ::after */
+.text-center .section-label::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
 /* ---- Cards (in @layer components so Tailwind utilities can override padding etc.) ---- */
 @layer components {
   .card {
@@ -175,7 +185,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  white-space: nowrap;
+  text-align: center;
 }
 
 .btn-primary:hover {
@@ -198,7 +208,7 @@ body {
   border: 1px solid var(--color-border-light);
   cursor: pointer;
   transition: all 0.3s ease;
-  white-space: nowrap;
+  text-align: center;
 }
 
 .btn-outline:hover {
@@ -265,13 +275,20 @@ body {
 
 .scroll-item {
   flex-shrink: 0;
-  height: 40px;
-  padding: 0 24px;
+  height: 32px;
+  padding: 0 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0.5;
   transition: opacity 0.3s;
+}
+
+@media (min-width: 640px) {
+  .scroll-item {
+    height: 40px;
+    padding: 0 24px;
+  }
 }
 
 .scroll-item:hover {
@@ -281,9 +298,15 @@ body {
 .scroll-item img {
   height: 100%;
   width: auto;
-  max-width: 140px;
+  max-width: 100px;
   object-fit: contain;
   filter: invert(1) grayscale(1) brightness(1.4) contrast(0.7);
+}
+
+@media (min-width: 640px) {
+  .scroll-item img {
+    max-width: 140px;
+  }
 }
 
 @keyframes scrollLeft {
@@ -411,8 +434,8 @@ body {
 /* ---- Glow decoration ---- */
 .glow {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: min(500px, 100vw);
+  height: min(500px, 100vw);
   background: radial-gradient(circle, rgba(27, 152, 224, 0.08) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;

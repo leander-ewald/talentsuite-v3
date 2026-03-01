@@ -48,7 +48,7 @@ export default function AuthorPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
 
-      <section style={{ background: "linear-gradient(135deg, #023B5B 0%, #035a8c 100%)", color: "white", padding: "4rem 1.5rem 3rem" }}>
+      <section style={{ background: "linear-gradient(135deg, #023B5B 0%, #035a8c 100%)", color: "white", padding: "6rem 1.5rem 3rem" }}>
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-6 flex-wrap">
             <div className="w-[100px] h-[100px] rounded-full flex items-center justify-center text-4xl font-bold shrink-0" style={{ background: "rgba(255,255,255,0.15)", backdropFilter: "blur(10px)", border: "3px solid rgba(255,255,255,0.3)" }}>RE</div>

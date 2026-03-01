@@ -34,7 +34,7 @@ export default function RecruitingAnalyse() {
     const style = document.createElement("style");
     style.setAttribute("data-ra-styles", "true");
     style.textContent = `
-      #ra { padding-top: 80px !important; }
+      #ra { padding-top: 96px !important; }
 
       #ra h1, #ra h2, #ra h3, #ra h4, #ra h5, #ra h6,
       #ra span, #ra li, #ra p, #ra div, #ra label, #ra button,
@@ -64,7 +64,7 @@ export default function RecruitingAnalyse() {
       #ra [data-ra="pribtn"]  { color: #ffffff !important; font-size: 16px !important; }
 
       @media (max-width: 768px) {
-        #ra { padding-top: 60px !important; }
+        #ra { padding-top: 96px !important; }
         #ra h1 { font-size: 26px !important; }
         #ra h2 { font-size: 20px !important; }
         #ra .ra-grid-3 { grid-template-columns: 1fr !important; gap: 20px !important; }

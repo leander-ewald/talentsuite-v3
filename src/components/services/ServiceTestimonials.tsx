@@ -46,7 +46,7 @@ export default function ServiceTestimonials({ title, description, link, linkText
                 <img src={t.img} alt={`${t.name}, ${t.role}`} loading="lazy" className="w-11 h-11 rounded-full object-cover border-2 border-[rgba(255,255,255,0.08)] flex-shrink-0" />
                 <div className="min-w-0 flex-1">
                   <h3 className="font-semibold text-sm leading-tight">{t.name}</h3>
-                  <p className="text-[12px] text-[rgba(255,255,255,0.4)] leading-tight mt-0.5">{t.role}</p>
+                  <p className="text-[13px] text-[rgba(255,255,255,0.4)] leading-tight mt-0.5">{t.role}</p>
                 </div>
                 <div className="flex gap-0.5 flex-shrink-0" aria-label="5 von 5 Sternen">
                   {[...Array(5)].map((_, j) => <Star key={j} size={12} className="text-[var(--color-accent)] fill-[var(--color-accent)]" />)}

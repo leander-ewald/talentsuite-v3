@@ -18,7 +18,7 @@ export default function Traditional({ title, description, data }: TraditionalPro
     <section className="section" aria-label="Herausforderungen">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {data.map((item, i) => (
               <div key={i} className="card-glass p-5 flex items-start gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[rgba(239,68,68,0.1)] flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -28,7 +28,7 @@ export default function Traditional({ title, description, data }: TraditionalPro
               </div>
             ))}
           </div>
-          <div>
+          <div className="order-1 lg:order-2">
             <h2 className="text-[clamp(1.75rem,3vw,2.5rem)] font-black leading-[1.15] tracking-tight mb-5">{title}</h2>
             <p className="text-base text-[rgba(255,255,255,0.55)] leading-relaxed">{description}</p>
           </div>

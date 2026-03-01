@@ -173,23 +173,23 @@ export default function Footer() {
             <div>
               <h4 className="text-[13px] font-semibold text-white uppercase tracking-wider mb-5">Ressourcen</h4>
               <nav className="flex flex-col gap-1">
-                <Link href="/blog" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5">
+                <Link href="/blog" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-2">
                   Blog
                 </Link>
-                <Link href="/so-funktionierts" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5">
+                <Link href="/so-funktionierts" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-2">
                   So funktioniert&apos;s
                 </Link>
-                <Link href="/preise" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5">
+                <Link href="/preise" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-2">
                   Preise
                 </Link>
-                <Link href="/case-studies" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5">
+                <Link href="/case-studies" className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-2">
                   Case Studies
                 </Link>
                 <a
                   href="https://calendar.app.google/QFoADWcRwwuYUoky8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-1.5"
+                  className="text-sm text-[rgba(255,255,255,0.45)] hover:text-white transition-colors duration-200 py-2"
                 >
                   Termin buchen
                 </a>

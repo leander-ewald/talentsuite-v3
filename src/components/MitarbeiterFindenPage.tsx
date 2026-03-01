@@ -151,12 +151,12 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
         className="bp-hero"
         style={{
           background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)",
-          padding: "80px 16px 56px",
+          padding: "96px 16px 56px",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        <style>{`@media(min-width:768px){.bp-hero{padding:80px 24px 88px !important}}`}</style>
+        <style>{`@media(min-width:768px){.bp-hero{padding:96px 24px 88px !important}}`}</style>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative" }}>
           <span style={{ fontSize: "clamp(40px, 10vw, 56px)", display: "block", marginBottom: 12 }}>{data.heroEmoji}</span>
           <h1 style={{ color: "#ffffff", fontWeight: 800, margin: "0 0 16px", lineHeight: 1.2 }}>
@@ -179,7 +179,7 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
             rel="noopener noreferrer"
             style={{
               display: "inline-block",
-              padding: "18px 44px",
+              padding: "18px 32px",
               background: "#ffffff",
               borderRadius: 12,
               color: "#023B5B",
@@ -188,6 +188,8 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
               textDecoration: "none",
               fontFamily: "inherit",
               boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+              maxWidth: "100%",
+              textAlign: "center" as const,
             }}
           >
             Kostenlose Recruiting-Analyse &rarr;
@@ -204,6 +206,7 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
 
           {/* Stats */}
           <div
+            className="bp-stats"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
@@ -215,7 +218,6 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
             {data.stats.map((s, idx) => (
               <div
                 key={idx}
-                className={idx === 0 ? "bp-stats" : undefined}
                 style={{
                   background: "#ffffff",
                   borderRadius: 14,
@@ -308,6 +310,7 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
                 {data.solutionIntro}
               </p>
               <div
+                className="bp-sol-grid"
                 style={{
                   display: "grid",
                   gridTemplateColumns: "1fr",
@@ -318,7 +321,7 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
                 {data.solutionCards.map((s, idx) => (
                   <div
                     key={idx}
-                    className={idx === 0 ? "bp-card bp-sol-grid" : "bp-card"}
+                    className="bp-card"
                     style={{ background: "#f0f4f7", borderRadius: 12, padding: 16, textAlign: "center" }}
                   >
                     <span style={{ fontSize: 28, display: "block", marginBottom: 8 }}>{s.icon}</span>
@@ -440,7 +443,7 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
                   rel="noopener noreferrer"
                   style={{
                     display: "inline-block",
-                    padding: "18px 44px",
+                    padding: "18px 32px",
                     background: "#ffffff",
                     borderRadius: 12,
                     color: "#023B5B",
@@ -449,6 +452,8 @@ export default function MitarbeiterFindenPage({ data }: { data: MitarbeiterFinde
                     textDecoration: "none",
                     fontFamily: "inherit",
                     marginBottom: 12,
+                    maxWidth: "100%",
+                    textAlign: "center" as const,
                   }}
                 >
                   Jetzt Termin w&auml;hlen &rarr;

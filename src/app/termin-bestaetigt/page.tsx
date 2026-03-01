@@ -9,7 +9,7 @@ export default function TerminBestaetigt() {
     const style = document.createElement("style");
     style.setAttribute("data-tb-styles", "true");
     style.textContent = `
-      #tb { padding-top: 80px !important; }
+      #tb { padding-top: 96px !important; }
 
       #tb h1, #tb h2, #tb h3, #tb h4, #tb h5, #tb h6,
       #tb span, #tb li, #tb p, #tb div, #tb label, #tb button,
@@ -38,7 +38,7 @@ export default function TerminBestaetigt() {
       #tb [data-tb="pribtn"]  { color: #ffffff !important; font-size: 16px !important; }
 
       @media (max-width: 768px) {
-        #tb { padding-top: 60px !important; }
+        #tb { padding-top: 96px !important; }
         #tb h1 { font-size: 26px !important; }
         #tb h2 { font-size: 20px !important; }
         #tb .tb-grid-3 { grid-template-columns: 1fr !important; gap: 24px !important; }

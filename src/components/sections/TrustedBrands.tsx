@@ -36,8 +36,8 @@ export default function TrustedBrands() {
 
       {/* Row 1: scroll left */}
       <div className="overflow-hidden py-3 relative">
-        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-10 sm:w-24 bg-gradient-to-r from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-10 sm:w-24 bg-gradient-to-l from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
         <div className="scroll-row scroll-left">
           {[...logos, ...logos, ...logos].map((logo, i) => (
             <div key={`top-${i}`} className="scroll-item">
@@ -49,8 +49,8 @@ export default function TrustedBrands() {
 
       {/* Row 2: scroll right */}
       <div className="overflow-hidden py-3 relative mt-4">
-        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-10 sm:w-24 bg-gradient-to-r from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-10 sm:w-24 bg-gradient-to-l from-[var(--color-primary)] to-transparent z-10 pointer-events-none" />
         <div className="scroll-row scroll-right">
           {[...logos2, ...logos2, ...logos2].map((logo, i) => (
             <div key={`bottom-${i}`} className="scroll-item">

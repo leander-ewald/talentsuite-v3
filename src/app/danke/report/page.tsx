@@ -8,7 +8,7 @@ export default function Danke() {
 
   return (
     <div style={{ background: "#f0f4f7", minHeight: "100vh" }}>
-      <div className="px-4 md:px-6 py-16 md:py-24 pb-[72px] md:pb-[104px]" style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", textAlign: "center" }}>
+      <div className="px-4 md:px-6 pt-24 md:pt-32 pb-[72px] md:pb-[104px]" style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", textAlign: "center" }}>
         <div style={{ width: 80, height: 80, borderRadius: "50%", margin: "0 auto 24px", background: "rgba(16,185,129,0.15)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 40 }}>📚</div>
         <h1 className="text-[24px] md:text-[36px]" style={{ color: "#ffffff", fontWeight: 800, margin: "0 0 12px", lineHeight: 1.15 }}>Ihr Report wird gesendet!</h1>
         <p className="text-[15px] md:text-[18px]" style={{ color: "rgba(255,255,255,0.7)", maxWidth: 520, margin: "0 auto" }}>Prüfen Sie Ihr Postfach — Der Branchenreport 2026 kommt in den nächsten Minuten.</p>

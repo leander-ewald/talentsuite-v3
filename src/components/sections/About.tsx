@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section className="section" aria-label="Über TalentSuite">
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Text */}
           <div>
             <span className="section-label">Über uns</span>

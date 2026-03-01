@@ -17,7 +17,7 @@ const timeline = [
 export default function CaseStudySHK() {
   return (
     <div style={{ background: "#f0f4f7", minHeight: "100vh" }}>
-      <div style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", padding: "72px 24px 80px", textAlign: "center" }}>
+      <div className="px-4 sm:px-6" style={{ background: "linear-gradient(135deg, #011E2F 0%, #023B5B 50%, #0A4D72 100%)", paddingTop: 96, paddingBottom: 80, textAlign: "center" }}>
         <Link href="/case-studies" style={{ color: "rgba(255,255,255,0.5)", fontSize: 13, textDecoration: "none", display: "block", marginBottom: 12 }}>← Alle Case Studies</Link>
         <div style={{ display: "inline-block", padding: "5px 18px", borderRadius: 20, marginBottom: 16, background: "rgba(16,185,129,0.15)" }}>
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 3, color: "#10B981" }}>SHK · SAUERLAND</span>
